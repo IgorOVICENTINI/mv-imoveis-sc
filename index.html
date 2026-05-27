@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="MV Imóveis — imobiliária de alto padrão em Joinville, Santa Catarina. Apartamentos de luxo, terrenos industriais estratégicos e consultoria imobiliária para investidores no Brasil e no exterior."/>
-<meta name="keywords" content="imobiliária de alto padrão Joinville, imóveis de luxo Santa Catarina, comprar imóvel no Brasil, investir em imóveis no Brasil, terrenos industriais Joinville, imóveis para brasileiros no exterior, patrimônio imobiliário no Brasil"/>
+<meta name="description" content="MV Imóveis — imobiliária de alto padrão em Joinville, Santa Catarina. Apartamentos de luxo, terrenos industriais e consultoria imobiliária para investidores no Brasil e no exterior."/>
+<meta name="keywords" content="imobiliária de alto padrão Joinville, imóveis de luxo Santa Catarina, comprar imóvel no Brasil, investir em imóveis no Brasil, terrenos industriais Joinville, imóveis para brasileiros no exterior"/>
 <meta name="robots" content="index, follow"/>
-<title>MV Imóveis Joinville | Imóveis de Alto Padrão e Investimento Imobiliário no Brasil</title>
+<title>MV Imóveis Joinville | Imóveis de Alto Padrão no Brasil</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--gold:#C9A84C;--dark:#0D1B2A;--white:#fff;--gray:#F5F5F5;--gray2:#E0E0E0;--text:#333;--tl:#666;--fh:'Playfair Display',serif;--fb:'Inter',sans-serif}
 html{scroll-behavior:smooth}
-body{font-family:var(--fb);color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.6}
+body{font-family:var(--fb);color:var(--text);background:var(--white);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 img{max-width:100%;display:block}
@@ -21,142 +21,235 @@ img{max-width:100%;display:block}
 [data-lang].active{display:block}
 .btn{display:inline-block;padding:.8rem 1.8rem;border-radius:4px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:.3s}
 .bg{background:var(--gold);color:var(--dark)}
-.bg:hover{background:#E8C96A;transform:translateY(-2px)}
+.bg:hover{background:#E8C96A}
 .bo{background:transparent;color:#fff;border:2px solid var(--gold)}
 .bo:hover{background:var(--gold);color:var(--dark)}
 .lb{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.25rem .6rem;border-radius:3px;cursor:pointer;font-size:.8rem;transition:.3s}
 .lb:hover,.lb.on{background:var(--gold);border-color:var(--gold);color:var(--dark)}
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:.3s;background:transparent}
-nav.scrolled{background:var(--dark);padding:.8rem 0;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+nav.scrolled{background:var(--dark);padding:.8rem 0}
 nav .c{display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--fh);font-size:1.5rem;color:#fff;display:flex;flex-direction:column;line-height:1.1}
 .logo span{font-size:.6rem;letter-spacing:3px;color:var(--gold);font-family:var(--fb);text-transform:uppercase}
 .nl{display:flex;gap:1.8rem}
-.nl a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:.3s}
+.nl a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500}
 .nl a:hover{color:#fff}
 .nr{display:flex;align-items:center;gap:1rem}
 .hb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hb span{display:block;width:24px;height:2px;background:#fff;transition:.3s}
 .mm{display:none;flex-direction:column;background:var(--dark);padding:1.5rem 5%;gap:1.2rem}
 .mm.open{display:flex}
+.mm a{color:rgba<document_processing>
+</document_processing>
+
+Marcel, agora eu entendi o problema de vez.
+
+O `index.html` que está no GitHub ainda é o arquivo antigo com "Prime Realty". O código novo que eu te passo aqui **nunca chegou ao GitHub** de forma correta.
+
+Vamos fazer isso de um jeito completamente diferente e que funciona 100%.
+
+---
+
+## A solução: usar o Netlify arrastando a pasta
+
+Você já tem conta no Netlify e já sabe arrastar. Vamos usar isso.
+
+### Passo 1 — Criar o arquivo correto no Mac
+
+1. Abra o **TextEdit**
+2. No menu: **Formatar → Converter em Texto Simples**
+3. **Arquivo → Novo**
+4. Copie TODO o código que está logo abaixo
+5. Cole com **Command + V**
+6. **Arquivo → Salvar**
+7. Nome: `index.html`
+8. Salve na sua **Mesa** (Desktop) dentro de uma pasta chamada `mv`
+9. Se perguntar extensão, escolha **Usar .html**
+
+### Passo 2 — Testar antes de subir
+
+1. No Finder, clique duas vezes no `index.html`
+2. Deve abrir no Safari mostrando o site com fundo escuro e "MV Imóveis"
+3. Se aparecer isso, está certo
+
+### Passo 3 — Subir no Netlify
+
+1. Acesse **https://app.netlify.com**
+2. Arraste a pasta `mv` para a área "Drop a folder here"
+3. Pronto, site no ar
+
+---
+
+Aqui está o código. Copie tudo do início ao fim:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="MV Imóveis — imobiliária de alto padrão em Joinville, Santa Catarina. Apartamentos de luxo, terrenos industriais estratégicos e consultoria imobiliária para investidores no Brasil e no exterior."/>
+<meta name="keywords" content="imobiliária de alto padrão Joinville, imóveis de luxo Santa Catarina, comprar imóvel no Brasil, investir em imóveis no Brasil, terrenos industriais Joinville, imóveis para brasileiros no exterior, consultoria imobiliária investidores Brasil"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="MV Imóveis — Imóveis de Alto Padrão e Investimento Imobiliário no Brasil"/>
+<meta property="og:description" content="Apartamentos de luxo e terrenos industriais em Joinville, Santa Catarina. Atendemos investidores no Brasil e no exterior."/>
+<meta property="og:type" content="website"/>
+<title>MV Imóveis Joinville | Imóveis de Alto Padrão e Investimento Imobiliário no Brasil</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0D1B2A;--white:#fff;--gray:#F5F5F5;--gray2:#E0E0E0;--text:#333;--tl:#666;--fh:'Playfair Display',serif;--fb:'Inter',sans-serif;--sh:0 4px 24px rgba(0,0,0,.10);--sh2:0 8px 40px rgba(0,0,0,.18)}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+.c{width:90%;max-width:1200px;margin:0 auto}
+[data-lang]{display:none}
+[data-lang].active{display:block}
+.btn{display:inline-block;padding:.85rem 2rem;border-radius:4px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:.3s;letter-spacing:.5px}
+.btn-g{background:var(--gold);color:var(--dark)}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-o{background:transparent;color:#fff;border:2px solid var(--gold)}
+.btn-o:hover{background:var(--gold);color:var(--dark)}
+.lb{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;padding:.3rem .7rem;border-radius:3px;cursor:pointer;font-size:.8rem;font-weight:500;transition:.3s}
+.lb:hover,.lb.on{background:var(--gold);border-color:var(--gold);color:var(--dark)}
+.gl{width:60px;height:3px;background:var(--gold);margin:.8rem 0 1.5rem}
+.st{font-family:var(--fh);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--dark);margin-bottom:.5rem}
+.ss{color:var(--tl);font-size:1rem;margin-bottom:2rem;max-width:640px}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:.3s}
+nav.sc{background:var(--dark);padding:.8rem 0;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+nav .c{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--fh);font-size:1.6rem;color:#fff;display:flex;flex-direction:column;line-height:1.1}
+.logo small{font-size:.6rem;letter-spacing:3px;color:var(--gold);font-family:var(--fb);font-weight:500;text-transform:uppercase}
+.nl{display:flex;gap:2rem}
+.nl a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:.3s}
+.nl a:hover{color:#fff}
+.nr{display:flex;align-items:center;gap:1rem}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hb span{display:block;width:24px;height:2px;background:#fff;transition:.3s}
+.hb.op span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.op span:nth-child(2){opacity:0}
+.hb.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;flex-direction:column;background:var(--dark);padding:1.5rem 5%;gap:1.2rem;position:fixed;top:60px;left:0;right:0;z-index:999}
+.mm.op{display:flex}
 .mm a{color:rgba(255,255,255,.85);font-size:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.8rem}
 .hero{min-height:100vh;background:linear-gradient(135deg,rgba(13,27,42,.88),rgba(13,27,42,.65)),url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;text-align:center;color:#fff;padding:8rem 0 4rem}
 .hc{max-width:820px;margin:0 auto}
-.badge{display:inline-block;background:rgba(201,168,76,.15);border:1px solid var(--gold);color:var(--gold);padding:.4rem 1.2rem;border-radius:50px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem}
-.hero h1{font-family:var(--fh);font-size:clamp(2rem,5vw,3.8rem);line-height:1.15;margin-bottom:1.2rem}
+.hbadge{display:inline-block;background:rgba(201,168,76,.15);border:1px solid var(--gold);color:var(--gold);padding:.4rem 1.2rem;border-radius:50px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem}
+.hero h1{font-family:var(--fh);font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.15;margin-bottom:1.2rem}
 .hero h1 em{color:var(--gold);font-style:normal}
-.hero p{font-size:clamp(1rem,2vw,1.1rem);color:rgba(255,255,255,.82);margin-bottom:2.5rem;max-width:640px;margin-left:auto;margin-right:auto}
+.hero p{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.82);margin-bottom:2.5rem;max-width:640px;margin-left:auto;margin-right:auto}
 .hbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .hstats{display:flex;justify-content:center;gap:3rem;margin-top:4rem;flex-wrap:wrap}
-.stat{text-align:center}
-.sn{font-family:var(--fh);font-size:2.2rem;color:var(--gold);font-weight:700}
-.sl{font-size:.8rem;color:rgba(255,255,255,.65);letter-spacing:1px;text-transform:uppercase}
-section{padding:5rem 0}
-.stl{font-family:var(--fh);font-size:clamp(1.6rem,3.5vw,2.5rem);color:var(--dark);margin-bottom:.5rem}
-.sst{color:var(--tl);font-size:.95rem;margin-bottom:2rem;max-width:600px}
-.gl{width:60px;height:3px;background:var(--gold);margin:.8rem 0 1.5rem}
-.lbl{color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.8rem;margin-bottom:.5rem}
-#sobre{background:var(--white)}
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.aimg{position:relative}
-.aimg img{width:100%;border-radius:8px;height:460px;object-fit:cover}
-.abadge{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--dark);padding:1.5rem;border-radius:8px;text-align:center}
-.abadge strong{display:block;font-family:var(--fh);font-size:2rem}
-.abadge span{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.hs{text-align:center}
+.hs-n{font-family:var(--fh);font-size:2.2rem;color:var(--gold);font-weight:700}
+.hs-l{font-size:.8rem;color:rgba(255,255,255,.65);letter-spacing:1px;text-transform:uppercase}
+#sobre{padding:6rem 0;background:var(--white)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.ai img{width:100%;border-radius:8px;object-fit:cover;height:480px}
+.ai{position:relative}
+.aib{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--dark);padding:1.5rem;border-radius:8px;text-align:center;box-shadow:var(--sh)}
+.aib strong{display:block;font-family:var(--fh);font-size:2.2rem}
+.aib span{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
 .flags{display:flex;gap:.8rem;margin-top:1.5rem;flex-wrap:wrap}
 .flag{display:flex;align-items:center;gap:.5rem;background:var(--gray);padding:.5rem 1rem;border-radius:50px;font-size:.85rem;font-weight:500}
-#servicos{background:var(--gray)}
-.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem}
-.sc{background:var(--white);border-radius:10px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:.3s;border-top:3px solid transparent}
-.sc:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(0,0,0,.15);border-top-color:var(--gold)}
-.sci{font-size:2.5rem;margin-bottom:1rem;display:block}
-.sc h3{font-family:var(--fh);font-size:1.2rem;color:var(--dark);margin-bottom:.7rem}
-.sc p{color:var(--tl);font-size:.9rem;line-height:1.7}
-#imoveis{background:var(--white)}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.pc{border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:.3s;background:var(--white);cursor:pointer}
-.pc:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(0,0,0,.15)}
-.pi{position:relative;height:220px;overflow:hidden}
-.pi img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.pc:hover .pi img{transform:scale(1.05)}
+#servicos{padding:6rem 0;background:var(--gray)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.sc2{background:var(--white);border-radius:10px;padding:2.5rem 2rem;box-shadow:var(--sh);transition:.3s;border-top:3px solid transparent}
+.sc2:hover{transform:translateY(-6px);box-shadow:var(--sh2);border-top-color:var(--gold)}
+.si{font-size:2.8rem;margin-bottom:1.2rem;display:block}
+.sc2 h3{font-family:var(--fh);font-size:1.3rem;color:var(--dark);margin-bottom:.8rem}
+.sc2 p{color:var(--tl);font-size:.92rem;line-height:1.7}
+#imoveis{padding:6rem 0;background:var(--white)}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.pc{border-radius:10px;overflow:hidden;box-shadow:var(--sh);transition:.3s;background:var(--white);cursor:pointer}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.pi{position:relative;height:230px;overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pc:hover .pi img{transform:scale(1.06)}
 .ptag{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--dark);padding:.3rem .9rem;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase}
 .pb{padding:1.5rem}
-.pb h3{font-family:var(--fh);font-size:1.15rem;color:var(--dark);margin-bottom:.4rem}
-.ploc{font-size:.85rem;color:var(--tl);margin-bottom:.8rem}
-.ppr{font-size:1.35rem;font-weight:700;color:var(--gold);font-family:var(--fh);margin-bottom:.8rem}
-.pf{display:flex;gap:.8rem;font-size:.8rem;color:var(--tl);border-top:1px solid var(--gray2);padding-top:.8rem;flex-wrap:wrap}
-.pcta{display:inline-block;margin-top:.8rem;padding:.5rem 1.2rem;background:var(--gold);color:var(--dark);border-radius:4px;font-size:.85rem;font-weight:600;transition:.3s}
-.pcta:hover{background:#E8C96A}
+.pb h3{font-family:var(--fh);font-size:1.2rem;color:var(--dark);margin-bottom:.4rem}
+.ploc{font-size:.85rem;color:var(--tl);margin-bottom:1rem}
+.ppr{font-size:1.4rem;font-weight:700;color:var(--gold);font-family:var(--fh);margin-bottom:1rem}
+.pf{display:flex;gap:1rem;font-size:.82rem;color:var(--tl);border-top:1px solid var(--gray2);padding-top:1rem;flex-wrap:wrap}
+.pcta{display:inline-block;margin-top:1rem;padding:.5rem 1.2rem;background:var(--gold);color:var(--dark);border-radius:4px;font-size:.85rem;font-weight:600;transition:.3s}
+.pcta:hover{background:var(--gold2)}
 .mo{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:2000;align-items:center;justify-content:center;padding:1rem}
-.mo.open{display:flex}
-.mb{background:var(--white);border-radius:12px;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.mcl{position:absolute;top:1rem;right:1rem;background:var(--gold);border:none;color:var(--dark);width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer;font-weight:700;z-index:10}
-.mi{width:100%;height:260px;object-fit:cover;border-radius:12px 12px 0 0}
-.md{padding:2rem}
-.mtag{display:inline-block;background:var(--gold);color:var(--dark);padding:.3rem .9rem;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:.8rem}
-.mt{font-family:var(--fh);font-size:1.7rem;color:var(--dark);margin-bottom:.4rem}
-.ml{font-size:.9rem;color:var(--tl);margin-bottom:.8rem}
-.mp{font-size:1.9rem;font-weight:700;color:var(--gold);font-family:var(--fh);margin-bottom:1.2rem}
-.mf{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.8rem;margin-bottom:1.2rem}
+.mo.op{display:flex}
+.mb{background:var(--white);border-radius:12px;max-width:780px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.mc2{position:absolute;top:1rem;right:1rem;background:var(--gold);border:none;color:var(--dark);width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer;font-weight:700;z-index:10;transition:.3s}
+.mc2:hover{background:var(--gold2)}
+.mi{width:100%;height:280px;object-fit:cover;border-radius:12px 12px 0 0}
+.mcon{padding:2rem}
+.mtag{display:inline-block;background:var(--gold);color:var(--dark);padding:.3rem .9rem;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:1rem}
+.mti{font-family:var(--fh);font-size:1.8rem;color:var(--dark);margin-bottom:.5rem}
+.mlo{font-size:.9rem;color:var(--tl);margin-bottom:1rem}
+.mpr{font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--fh);margin-bottom:1.5rem}
+.mf{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-bottom:1.5rem}
 .mfi{background:var(--gray);padding:.8rem;border-radius:8px;text-align:center;font-size:.85rem;color:var(--dark);font-weight:500}
 .mfi span{display:block;font-size:1.2rem;margin-bottom:.3rem}
-.mde{color:var(--tl);line-height:1.8;margin-bottom:1.2rem;font-size:.93rem}
-.ma{display:flex;gap:1rem;flex-wrap:wrap}
-.ma a{flex:1;text-align:center;padding:.8rem 1.2rem;border-radius:6px;font-weight:600;font-size:.9rem;transition:.3s;color:#fff}
-.mwa{background:#25D366}
+.mde{color:var(--tl);line-height:1.8;margin-bottom:1.5rem;font-size:.95rem}
+.mac{display:flex;gap:1rem;flex-wrap:wrap}
+.mac a{flex:1;text-align:center;padding:.85rem 1.5rem;border-radius:6px;font-weight:600;font-size:.95rem;transition:.3s}
+.mwa{background:#25D366;color:#fff}
 .mwa:hover{background:#1da851}
-.mco{background:var(--gold);color:var(--dark)}
-.mco:hover{background:#E8C96A}
-#regioes{background:var(--dark);color:#fff}
-.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}
+.mct{background:var(--gold);color:var(--dark)}
+.mct:hover{background:var(--gold2)}
+#regioes{padding:5rem 0;background:var(--dark);color:#fff}
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}
 .rc{background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.2);border-radius:8px;padding:1.8rem;text-align:center;transition:.3s}
 .rc:hover{background:rgba(201,168,76,.1);border-color:var(--gold)}
 .rc h3{font-family:var(--fh);font-size:1.1rem;margin-bottom:.4rem}
 .rc p{font-size:.82rem;color:rgba(255,255,255,.55)}
 .ri{font-size:2rem;margin-bottom:.8rem}
-#parceiros{background:var(--gray)}
-.parwrap{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:2rem}
-.parcard{background:var(--white);border-radius:10px;padding:1.5rem 2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center;min-width:220px;transition:.3s}
-.parcard:hover{transform:translateY(-4px)}
-.parcard a{color:var(--gold);font-weight:600;font-size:1rem}
-.parcard p{font-size:.82rem;color:var(--tl);margin-top:.4rem}
-#contato{background:var(--white)}
-.cgrid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
-.ci h3{font-family:var(--fh);font-size:1.4rem;color:var(--dark);margin-bottom:1.5rem}
+#parceiros{padding:4rem 0;background:var(--gray)}
+.pw{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:2rem}
+.par{background:var(--white);border-radius:10px;padding:1.5rem 2rem;box-shadow:var(--sh);text-align:center;min-width:220px;transition:.3s}
+.par:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.par a{color:var(--gold);font-weight:600;font-size:1rem}
+.par p{font-size:.82rem;color:var(--tl);margin-top:.4rem}
+#contato{padding:6rem 0;background:var(--white)}
+.cg{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.ci h3{font-family:var(--fh);font-size:1.5rem;color:var(--dark);margin-bottom:1.5rem}
 .cit{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
-.cion{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.cit strong{display:block;font-size:.9rem;color:var(--dark);margin-bottom:.2rem}
-.cit span,.cit a{font-size:.88rem;color:var(--tl)}
-.cit a:hover{color:var(--gold)}
-.cf{background:var(--gray);padding:2.5rem;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
-.cf h3{font-family:var(--fh);font-size:1.3rem;color:var(--dark);margin-bottom:1.5rem}
+.cci{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cit-t strong{display:block;font-size:.9rem;color:var(--dark);margin-bottom:.2rem}
+.cit-t span,.cit-t a{font-size:.88rem;color:var(--tl)}
+.cit-t a:hover{color:var(--gold)}
+.cf{background:var(--gray);padding:2.5rem;border-radius:10px;box-shadow:var(--sh)}
+.cf h3{font-family:var(--fh);font-size:1.4rem;color:var(--dark);margin-bottom:1.5rem}
 .fg{margin-bottom:1.2rem}
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .fg label{display:block;font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
 .fg input,.fg select,.fg textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--gray2);border-radius:6px;font-family:var(--fb);font-size:.9rem;color:var(--text);transition:.3s;background:var(--white)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15)}
 .fg textarea{resize:vertical;min-height:110px}
-footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem 0 1.5rem}
-.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3.5rem 0 1.5rem}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .fb p{font-size:.88rem;line-height:1.7;margin-top:1rem;max-width:300px}
-.fl h4,.fc h4{font-family:var(--fh);color:#fff;margin-bottom:1rem}
-.fl ul,.fc ul{display:flex;flex-direction:column;gap:.6rem}
+.fl h4,.fco h4{font-family:var(--fh);color:#fff;margin-bottom:1rem;font-size:1.05rem}
+.fl ul,.fco ul{display:flex;flex-direction:column;gap:.6rem}
 .fl a{font-size:.88rem;transition:.3s}
 .fl a:hover{color:var(--gold)}
-.fc li{font-size:.88rem;display:flex;gap:.5rem}
+.fco li{font-size:.88rem;display:flex;gap:.5rem}
 .fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.82rem}
-.waf{position:fixed;bottom:2rem;left:2rem;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 16px rgba(37,211,102,.4);z-index:999;transition:.3s;text-decoration:none}
-.waf:hover{transform:scale(1.1)}
-.sct{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;background:var(--gold);color:var(--dark);border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:.3s;z-index:999}
-.sct.vis{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.agrid{grid-template-columns:1fr}.aimg{display:none}.cgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}.nl{display:none}.hb{display:flex}}
-@media(max-width:600px){.hstats{gap:1.5rem}.fgrid{grid-template-columns:1fr}.fr{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}}
+.wf{position:fixed;bottom:2rem;left:2rem;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 16px rgba(37,211,102,.4);z-index:999;transition:.3s;text-decoration:none}
+.wf:hover{transform:scale(1.1)}
+.st2{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;background:var(--gold);color:var(--dark);border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:.3s;z-index:999}
+.st2.vis{opacity:1;transform:translateY(0)}
+.fi{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fi.vis{opacity:1;transform:translateY(0)}
+@media(max-width:900px){.ag{grid-template-columns:1fr}.ai{display:none}.cg{grid-template-columns:1fr}.fg2{grid-template-columns:1fr 1fr}.nl{display:none}.hb{display:flex}}
+@media(max-width:600px){.hstats{gap:1.5rem}.fg2{grid-template-columns:1fr}.fr{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.mf{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
+
 <nav id="nav">
 <div class="c">
-<a href="#hero" class="logo">MV Imóveis<span>Joinville · Santa Catarina</span></a>
+<a href="#hero" class="logo">MV Imóveis<small>Joinville · Santa Catarina</small></a>
 <ul class="nl">
 <li><a href="#sobre"><span data-lang="pt" class="active">Sobre</span><span data-lang="en">About</span><span data-lang="fr">À Propos</span></a></li>
 <li><a href="#servicos"><span data-lang="pt" class="active">Serviços</span><span data-lang="en">Services</span><span data-lang="fr">Services</span></a></li>
@@ -165,48 +258,56 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem 0 1.5rem}
 <li><a href="#contato"><span data-lang="pt" class="active">Contato</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a></li>
 </ul>
 <div class="nr">
+<div style="display:flex;gap:.5rem">
 <button class="lb on" onclick="setLang('pt')">PT</button>
 <button class="lb" onclick="setLang('en')">EN</button>
 <button class="lb" onclick="setLang('fr')">FR</button>
+</div>
 <button class="hb" id="hb"><span></span><span></span><span></span></button>
 </div>
 </div>
 </nav>
+
 <div class="mm" id="mm">
-<a href="#sobre" onclick="closeMM()">Sobre</a>
-<a href="#servicos" onclick="closeMM()">Serviços</a>
-<a href="#imoveis" onclick="closeMM()">Imóveis</a>
-<a href="#regioes" onclick="closeMM()">Regiões</a>
-<a href="#contato" onclick="closeMM()">Contato</a>
+<a href="#sobre" onclick="cM()">Sobre</a>
+<a href="#servicos" onclick="cM()">Serviços</a>
+<a href="#imoveis" onclick="cM()">Imóveis</a>
+<a href="#regioes" onclick="cM()">Regiões</a>
+<a href="#contato" onclick="cM()">Contato</a>
 </div>
+
 <section class="hero" id="hero">
-<div class="c"><div class="hc">
-<div class="badge"><span data-lang="pt" class="active">✦ Joinville · Santa Catarina · Brasil</span><span data-lang="en">✦ Joinville · Santa Catarina · Brazil</span><span data-lang="fr">✦ Joinville · Santa Catarina · Brésil</span></div>
+<div class="c">
+<div class="hc">
+<div class="hbadge"><span data-lang="pt" class="active">✦ Joinville · Santa Catarina · Brasil</span><span data-lang="en">✦ Joinville · Santa Catarina · Brazil</span><span data-lang="fr">✦ Joinville · Santa Catarina · Brésil</span></div>
 <h1><span data-lang="pt" class="active">Imóveis de <em>Alto Padrão</em> e Investimento Imobiliário no Brasil</span><span data-lang="en">Premium <em>Real Estate</em> and Property Investment in Brazil</span><span data-lang="fr">Immobilier <em>de Prestige</em> et Investissement au Brésil</span></h1>
-<p><span data-lang="pt" class="active">Apartamentos residenciais de luxo e terrenos industriais estratégicos. Consultoria para investidores no Brasil e no exterior. Parceiros em Joinville, Curitiba, Toulouse (França) e Londres (Inglaterra).</span><span data-lang="en">Luxury residential apartments and strategic industrial land. Consulting for investors in Brazil and abroad. Partners in Joinville, Curitiba, Toulouse (France) and London (England).</span><span data-lang="fr">Appartements de luxe et terrains industriels stratégiques. Conseil pour investisseurs au Brésil et à l'étranger. Partenaires à Joinville, Curitiba, Toulouse et Londres.</span></p>
+<p><span data-lang="pt" class="active">Apartamentos residenciais de luxo e terrenos industriais estratégicos. Consultoria imobiliária para investidores no Brasil e no exterior. Parceiros em Joinville, Curitiba, Toulouse (França) e Londres (Inglaterra).</span><span data-lang="en">Luxury residential apartments and strategic industrial land. Real estate consulting for investors in Brazil and abroad. Partners in Joinville, Curitiba, Toulouse (France) and London (England).</span><span data-lang="fr">Appartements résidentiels de luxe et terrains industriels stratégiques. Conseil immobilier pour investisseurs. Partenaires à Joinville, Curitiba, Toulouse et Londres.</span></p>
 <div class="hbtns">
-<a href="#imoveis" class="btn bg"><span data-lang="pt" class="active">Ver Imóveis</span><span data-lang="en">View Properties</span><span data-lang="fr">Voir les Biens</span></a>
-<a href="#contato" class="btn bo"><span data-lang="pt" class="active">Fale Conosco</span><span data-lang="en">Contact Us</span><span data-lang="fr">Contactez-nous</span></a>
+<a href="#imoveis" class="btn btn-g"><span data-lang="pt" class="active">Ver Imóveis</span><span data-lang="en">View Properties</span><span data-lang="fr">Voir les Biens</span></a>
+<a href="#contato" class="btn btn-o"><span data-lang="pt" class="active">Fale Conosco</span><span data-lang="en">Contact Us</span><span data-lang="fr">Contactez-nous</span></a>
 </div>
 <div class="hstats">
-<div class="stat"><div class="sn">15+</div><div class="sl"><span data-lang="pt" class="active">Anos de Mercado</span><span data-lang="en">Years in Market</span><span data-lang="fr">Ans d'Expérience</span></div></div>
-<div class="stat"><div class="sn">200+</div><div class="sl"><span data-lang="pt" class="active">Imóveis Vendidos</span><span data-lang="en">Properties Sold</span><span data-lang="fr">Biens Vendus</span></div></div>
-<div class="stat"><div class="sn">4</div><div class="sl"><span data-lang="pt" class="active">Países Atendidos</span><span data-lang="en">Countries Served</span><span data-lang="fr">Pays Servis</span></div></div>
+<div class="hs"><div class="hs-n">15+</div><div class="hs-l"><span data-lang="pt" class="active">Anos de Mercado</span><span data-lang="en">Years in Market</span><span data-lang="fr">Ans d'Expérience</span></div></div>
+<div class="hs"><div class="hs-n">200+</div><div class="hs-l"><span data-lang="pt" class="active">Imóveis Vendidos</span><span data-lang="en">Properties Sold</span><span data-lang="fr">Biens Vendus</span></div></div>
+<div class="hs"><div class="hs-n">4</div><div class="hs-l"><span data-lang="pt" class="active">Países Atendidos</span><span data-lang="en">Countries Served</span><span data-lang="fr">Pays Servis</span></div></div>
 </div>
-</div></div>
+</div>
+</div>
 </section>
-<section id="sobre">
-<div class="c"><div class="agrid">
-<div class="aimg">
-<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Consultoria imobiliária alto padrão Joinville MV Imóveis" loading="lazy"/>
-<div class="abadge"><strong>15+</strong><span><span data-lang="pt" class="active">Anos de Experiência</span><span data-lang="en">Years Experience</span><span data-lang="fr">Ans d'Expérience</span></span></div>
+
+<section id="sobre" style="padding:6rem 0;background:#fff">
+<div class="c">
+<div class="ag">
+<div class="ai">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Consultoria imobiliária alto padrão Joinville MV Imóveis"/>
+<div class="aib"><strong>15+</strong><span><span data-lang="pt" class="active">Anos de Experiência</span><span data-lang="en">Years Experience</span><span data-lang="fr">Ans d'Expérience</span></span></div>
 </div>
-<div>
-<p class="lbl"><span data-lang="pt" class="active">Sobre Nós</span><span data-lang="en">About Us</span><span data-lang="fr">À Propos</span></p>
-<h2 class="stl"><span data-lang="pt" class="active">Consultoria Imobiliária para Investidores no Brasil e no Exterior</span><span data-lang="en">Real Estate Consulting for Investors in Brazil and Abroad</span><span data-lang="fr">Conseil Immobilier pour Investisseurs au Brésil et à l'Étranger</span></h2>
+<div class="fi">
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">Sobre Nós</span><span data-lang="en">About Us</span><span data-lang="fr">À Propos</span></p>
+<h2 class="st"><span data-lang="pt" class="active">Consultoria Imobiliária para Investidores no Brasil e no Exterior</span><span data-lang="en">Real Estate Consulting for Investors in Brazil and Abroad</span><span data-lang="fr">Conseil Immobilier pour Investisseurs au Brésil et à l'Étranger</span></h2>
 <div class="gl"></div>
-<p style="color:var(--tl);line-height:1.8;margin-bottom:1.2rem"><span data-lang="pt" class="active">Na MV Imóveis, cada imóvel é escolhido como se fosse nosso. Atuamos com foco em imóveis de alto padrão, localizados nos melhores bairros da região, com excelente infraestrutura, segurança e forte potencial de valorização.</span><span data-lang="en">At MV Imóveis, each property is selected as if it were our own. We focus on high-standard properties in the best neighborhoods, with excellent infrastructure, security, and strong appreciation potential.</span><span data-lang="fr">Chez MV Imóveis, chaque bien est choisi comme s'il était le nôtre. Nous travaillons avec des biens de haut standing dans les meilleurs quartiers avec un fort potentiel de valorisation.</span></p>
-<p style="color:var(--tl);line-height:1.8;margin-bottom:1.8rem"><span data-lang="pt" class="active">Nossa equipe une experiência de mercado, visão estratégica e atendimento discreto. Investir bem é investir em localização, qualidade e solidez patrimonial. Quem investe em terra, não erra.</span><span data-lang="en">Our team combines market experience, strategic vision, and discreet service. To invest well is to invest in location, quality, and solid assets.</span><span data-lang="fr">Notre équipe allie expérience de marché, vision stratégique et service discret. Bien investir, c'est investir dans l'emplacement et la qualité.</span></p>
+<p style="color:var(--tl);line-height:1.8;margin-bottom:1.2rem"><span data-lang="pt" class="active">Na MV Imóveis, cada imóvel é escolhido como se fosse nosso. Atuamos com foco em imóveis de alto padrão, localizados nos melhores bairros da região, com excelente infraestrutura, segurança, serviços de alto nível e forte potencial de valorização.</span><span data-lang="en">At MV Imóveis, each property is selected as if it were our own. We focus on high-standard properties in the best neighborhoods, with excellent infrastructure, security, premium services, and strong appreciation potential.</span><span data-lang="fr">Chez MV Imóveis, chaque bien est choisi comme s'il était le nôtre. Nous travaillons avec des biens de haut standing dans les meilleurs quartiers.</span></p>
+<p style="color:var(--tl);line-height:1.8;margin-bottom:1.8rem"><span data-lang="pt" class="active">Nossa equipe une experiência de mercado, visão estratégica e atendimento discreto para orientar decisões de moradia e investimento com máxima segurança. Investir bem é investir em localização, qualidade e solidez patrimonial. Quem investe em terra, não erra.</span><span data-lang="en">Our team combines market experience, strategic vision, and discreet service. To invest well is to invest in location, quality, and solid assets. Those who invest in land rarely go wrong.</span><span data-lang="fr">Notre équipe allie expérience de marché et service discret. Bien investir, c'est investir dans l'emplacement et la qualité patrimoniale.</span></p>
 <div class="flags">
 <div class="flag">🇧🇷 Joinville · Curitiba</div>
 <div class="flag">🇫🇷 Toulouse, França</div>
@@ -214,52 +315,88 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem 0 1.5rem}
 <div class="flag">🌍 <span data-lang="pt" class="active">Atendimento Internacional</span><span data-lang="en">International Service</span><span data-lang="fr">Service International</span></div>
 </div>
 </div>
-</div></div>
-</section>
-<section id="servicos" style="background:var(--gray)">
-<div class="c">
-<p class="lbl"><span data-lang="pt" class="active">O Que Oferecemos</span><span data-lang="en">What We Offer</span><span data-lang="fr">Ce Que Nous Offrons</span></p>
-<h2 class="stl"><span data-lang="pt" class="active">Nossos Serviços</span><span data-lang="en">Our Services</span><span data-lang="fr">Nos Services</span></h2>
-<div class="gl"></div>
-<div class="sgrid">
-<article class="sc"><span class="sci">🏢</span><h3><span data-lang="pt" class="active">Apartamentos de Luxo</span><span data-lang="en">Luxury Apartments</span><span data-lang="fr">Appartements de Luxe</span></h3><p><span data-lang="pt" class="active">Imóveis de alto padrão para renda e moradia em Joinville e Santa Catarina. Acabamentos nobres e localização privilegiada.</span><span data-lang="en">High-end properties for income and living in Joinville and Santa Catarina. Noble finishes and prime locations.</span><span data-lang="fr">Biens haut de gamme à Joinville et Santa Catarina. Finitions nobles et emplacements privilégiés.</span></p></article>
-<article class="sc"><span class="sci">🏭</span><h3><span data-lang="pt" class="active">Terrenos Industriais Estratégicos</span><span data-lang="en">Strategic Industrial Land</span><span data-lang="fr">Terrains Industriels Stratégiques</span></h3><p><span data-lang="pt" class="active">Terrenos para expansão de empresas no Brasil. Joinville é o maior polo industrial do sul do Brasil.</span><span data-lang="en">Land for business expansion in Brazil. Joinville is the largest industrial hub in southern Brazil.</span><span data-lang="fr">Terrains pour l'expansion d'entreprises. Joinville est le plus grand pôle industriel du sud du Brésil.</span></p></article>
-<article class="sc"><span class="sci">🌐</span><h3><span data-lang="pt" class="active">Imóveis para Brasileiros no Exterior</span><span data-lang="en">Properties for Brazilians Abroad</span><span data-lang="fr">Biens pour Brésiliens à l'Étranger</span></h3><p><span data-lang="pt" class="active">Assessoria completa para brasileiros no exterior que desejam comprar imóvel no Brasil com segurança.</span><span data-lang="en">Full advisory for Brazilians overseas looking to buy property in Brazil safely.</span><span data-lang="fr">Accompagnement complet pour les Brésiliens souhaitant acheter un bien au Brésil.</span></p></article>
-<article class="sc"><span class="sci">📊</span><h3><span data-lang="pt" class="active">Consultoria de Investimentos</span><span data-lang="en">Investment Consulting</span><span data-lang="fr">Conseil en Investissement</span></h3><p><span data-lang="pt" class="active">Análise de mercado e orientação sobre onde investir em imóveis no Brasil com alto potencial de valorização.</span><span data-lang="en">Market analysis and guidance on where to invest in real estate in Brazil.</span><span data-lang="fr">Analyse de marché et orientation sur les meilleures opportunités d'investissement au Brésil.</span></p></article>
-<article class="sc"><span class="sci">📝</span><h3><span data-lang="pt" class="active">Assessoria Jurídica e Documental</span><span data-lang="en">Legal and Documentation Support</span><span data-lang="fr">Assistance Juridique et Documentaire</span></h3><p><span data-lang="pt" class="active">Suporte completo em documentação, contratos e regularização para compradores nacionais e internacionais.</span><span data-lang="en">Full support in documentation, contracts, and regularization for national and international buyers.</span><span data-lang="fr">Support complet en documentation, contrats et régularisation pour acheteurs nationaux et internationaux.</span></p></article>
-<article class="sc"><span class="sci">🤝</span><h3><span data-lang="pt" class="active">Visitas e Tours Virtuais</span><span data-lang="en">Visits and Virtual Tours</span><span data-lang="fr">Visites et Tours Virtuels</span></h3><p><span data-lang="pt" class="active">Organizamos visitas presenciais e tours virtuais para clientes no exterior que desejam conhecer o imóvel antes da compra.</span><span data-lang="en">We organize in-person visits and virtual tours for clients abroad who want to see the property before purchasing.</span><span data-lang="fr">Visites en personne et virtuelles pour les clients à l'étranger souhaitant voir le bien avant l'achat.</span></p></article>
 </div>
 </div>
 </section>
-<section id="imoveis">
+
+<section id="servicos" style="padding:6rem 0;background:var(--gray)">
 <div class="c">
-<p class="lbl"><span data-lang="pt" class="active">Destaques</span><span data-lang="en">Featured Properties</span><span data-lang="fr">Biens en Vedette</span></p>
-<h2 class="stl"><span data-lang="pt" class="active">Imóveis em Destaque</span><span data-lang="en">Featured Properties</span><span data-lang="fr">Biens Immobiliers</span></h2>
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">O Que Oferecemos</span><span data-lang="en">What We Offer</span><span data-lang="fr">Ce Que Nous Offrons</span></p>
+<h2 class="st"><span data-lang="pt" class="active">Nossos Serviços</span><span data-lang="en">Our Services</span><span data-lang="fr">Nos Services</span></h2>
 <div class="gl"></div>
-<p class="sst"><span data-lang="pt" class="active">Clique em qualquer imóvel para ver todos os detalhes e entrar em contato.</span><span data-lang="en">Click any property for full details and to get in touch.</span><span data-lang="fr">Cliquez sur n'importe quel bien pour tous les détails.</span></p>
-<div class="pgrid">
-<article class="pc" onclick="openM('m1')"><div class="pi"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Apartamento alto padrão Rua Otto Boehm Joinville" loading="lazy"/><span class="ptag">Residencial</span></div><div class="pb"><h3>Exclusividade — Rua Otto Boehm</h3><p class="ploc">📍 Rua Otto Boehm | América | Joinville, SC</p><p class="ppr">R$ 2.150.000</p><div class="pf"><span>🛏 4 quartos</span><span>🚿 5 banheiros</span><span>🛋 Mobiliado</span></div><span class="pcta">Ver Detalhes →</span></div></article>
-<article class="pc" onclick="openM('m2')"><div class="pi"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Apartamento 3 suítes América Joinville" loading="lazy"/><span class="ptag">Residencial</span></div><div class="pb"><h3>Apartamento 3 Suítes — América</h3><p class="ploc">📍 Bairro América | Joinville, SC</p><p class="ppr">R$ 4.000.000</p><div class="pf"><span>🛏 3 suítes</span><span>🚿 4 banheiros</span><span>📐 422m²</span></div><span class="pcta">Ver Detalhes →</span></div></article>
-<article class="pc" onclick="openM('m3')"><div class="pi"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Cobertura duplex Centro Joinville" loading="lazy"/><span class="ptag">Cobertura</span></div><div class="pb"><h3>Cobertura Duplex — Centro</h3><p class="ploc">📍 Centro | Joinville, SC</p><p class="ppr">R$ 5.350.000</p><div class="pf"><span>🛏 4 quartos</span><span>🚿 7 banheiros</span><span>🏙️ Duplex</span></div><span class="pcta">Ver Detalhes →</span></div></article>
-<article class="pc" onclick="openM('m4')"><div class="pi"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Apartamento Glória Joinville" loading="lazy"/><span class="ptag">Residencial</span></div><div class="pb"><h3>Apartamento Atiradores — Glória</h3><p class="ploc">📍 Rua Euzébio de Queirós | Glória | Joinville, SC</p><p class="ppr">R$ 1.290.000</p><div class="pf"><span>🛏 3 dormitórios</span><span>🚿 4 banheiros</span><span>📐 219m²</span></div><span class="pcta">Ver Detalhes →</span></div></article>
-<article class="pc" onclick="openM('m5')"><div class="pi"><img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Casa alto padrão Glória Joinville" loading="lazy"/><span class="ptag">Casa</span></div><div class="pb"><h3>Casa de Alto Padrão — Glória</h3><p class="ploc">📍 Bairro Glória | Joinville, SC</p><p class="ppr">R$ 2.280.000</p><div class="pf"><span>🛏 4 dormitórios</span><span>🚿 4 banheiros</span><span>📐 1.284m²</span></div><span class="pcta">Ver Detalhes →</span></div></article>
-<article class="pc" onclick="openM('m6')"><div class="pi"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Galpão industrial Araquari SC" loading="lazy"/><span class="ptag">Industrial</span></div><div class="pb"><h3>Galpão Industrial — Araquari</h3><p class="ploc">📍 Araquari, SC</p><p class="ppr">R$ 25.000.000</p><div class="pf"><span>📐 40.000m²</span><span>🏗 Industrial</span><span>🚛 Logística</span></div><span class="pcta">Ver Detalhes →</span></div></article>
+<p class="ss"><span data-lang="pt" class="active">Soluções completas para comprar imóvel no Brasil com segurança.</span><span data-lang="en">Complete solutions for buying property in Brazil safely.</span><span data-lang="fr">Solutions complètes pour acheter un bien au Brésil en toute sécurité.</span></p>
+<div class="sg fi">
+<article class="sc2"><span class="si">🏢</span><h3><span data-lang="pt" class="active">Apartamentos de Luxo</span><span data-lang="en">Luxury Apartments</span><span data-lang="fr">Appartements de Luxe</span></h3><p><span data-lang="pt" class="active">Imóveis de alto padrão para renda e moradia em Joinville e Santa Catarina. Acabamentos nobres e localização privilegiada.</span><span data-lang="en">High-end properties in Joinville and Santa Catarina. Noble finishes and prime locations.</span><span data-lang="fr">Biens haut de gamme à Joinville et Santa Catarina. Finitions nobles.</span></p></article>
+<article class="sc2"><span class="si">🏭</span><h3><span data-lang="pt" class="active">Terrenos Industriais Estratégicos</span><span data-lang="en">Strategic Industrial Land</span><span data-lang="fr">Terrains Industriels Stratégiques</span></h3><p><span data-lang="pt" class="active">Terrenos para expansão de empresas no Brasil. Joinville é o maior polo industrial do sul do Brasil.</span><span data-lang="en">Land for business expansion in Brazil. Joinville is the largest industrial hub in southern Brazil.</span><span data-lang="fr">Terrains pour l'expansion d'entreprises au Brésil.</span></p></article>
+<article class="sc2"><span class="si">🌐</span><h3><span data-lang="pt" class="active">Imóveis para Brasileiros no Exterior</span><span data-lang="en">Properties for Brazilians Abroad</span><span data-lang="fr">Biens pour Brésiliens à l'Étranger</span></h3><p><span data-lang="pt" class="active">Assessoria completa para brasileiros no exterior que desejam investir em imóveis no Brasil com segurança.</span><span data-lang="en">Full advisory for Brazilians overseas looking to invest safely in Brazil.</span><span data-lang="fr">Accompagnement complet pour les Brésiliens souhaitant investir au Brésil.</span></p></article>
+<article class="sc2"><span class="si">📊</span><h3><span data-lang="pt" class="active">Consultoria de Investimentos</span><span data-lang="en">Investment Consulting</span><span data-lang="fr">Conseil en Investissement</span></h3><p><span data-lang="pt" class="active">Análise de mercado e orientação sobre onde investir em imóveis no Brasil com alto potencial de valorização.</span><span data-lang="en">Market analysis and guidance on where to invest in real estate in Brazil.</span><span data-lang="fr">Analyse de marché et orientation sur les meilleures opportunités d'investissement.</span></p></article>
+<article class="sc2"><span class="si">📝</span><h3><span data-lang="pt" class="active">Assessoria Jurídica e Documental</span><span data-lang="en">Legal and Documentation Support</span><span data-lang="fr">Assistance Juridique</span></h3><p><span data-lang="pt" class="active">Suporte completo em documentação, contratos e regularização para compradores nacionais e internacionais.</span><span data-lang="en">Full support in documentation, contracts, and regularization for all buyers.</span><span data-lang="fr">Support complet en documentation et contrats pour tous les acheteurs.</span></p></article>
+<article class="sc2"><span class="si">🤝</span><h3><span data-lang="pt" class="active">Visitas e Tours Virtuais</span><span data-lang="en">Visits and Virtual Tours</span><span data-lang="fr">Visites et Tours Virtuels</span></h3><p><span data-lang="pt" class="active">Organizamos visitas presenciais e tours virtuais para clientes no exterior que desejam conhecer o imóvel antes da compra.</span><span data-lang="en">We organize in-person and virtual tours for clients abroad.</span><span data-lang="fr">Visites en personne et virtuelles pour les clients à l'étranger.</span></p></article>
 </div>
-<div style="text-align:center;margin-top:2.5rem"><a href="#contato" class="btn bg"><span data-lang="pt" class="active">Consultar Mais Imóveis</span><span data-lang="en">Inquire About More Properties</span><span data-lang="fr">Renseignez-vous sur Plus de Biens</span></a></div>
 </div>
 </section>
-<div class="mo" id="m1" onclick="closeOut(event,'m1')"><div class="mb"><button class="mcl" onclick="closeM('m1')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Apartamento Rua Otto Boehm Joinville"/><div class="md"><span class="mtag">Residencial · Mobiliado</span><h2 class="mt">Exclusividade e Sofisticação — Rua Otto Boehm</h2><p class="ml">📍 Rua Otto Boehm | Bairro América | Joinville, SC</p><p class="mp">R$ 2.150.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>5 Banheiros</div><div class="mfi"><span>🛋</span>Mobiliado</div><div class="mfi"><span>⭐</span>Alto Padrão</div></div><p class="mde">Apartamento de alto padrão com exclusividade e sofisticação no bairro América, um dos endereços mais valorizados de Joinville. Totalmente mobiliado, acabamentos de primeira linha, 4 dormitórios, 5 banheiros e localização privilegiada.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20no%20apto%20Rua%20Otto%20Boehm%20R%24%202.150.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m1')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<div class="mo" id="m2" onclick="closeOut(event,'m2')"><div class="mb"><button class="mcl" onclick="closeM('m2')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Apartamento 3 suítes América Joinville"/><div class="md"><span class="mtag">Residencial · Alto Padrão</span><h2 class="mt">Apartamento 3 Suítes — Bairro América</h2><p class="ml">📍 Bairro América | Joinville, SC</p><p class="mp">R$ 4.000.000</p><div class="mf"><div class="mfi"><span>🛏</span>3 Suítes</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>422,10m²</div><div class="mfi"><span>⭐</span>Luxo</div></div><p class="mde">Apartamento de luxo com 3 suítes e 422,10m² no bairro América, região nobre de Joinville. Acabamento de altíssimo padrão, amplas áreas sociais e infraestrutura completa. Forte potencial de valorização.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20no%20Apto%203%20Suítes%20América%20R%24%204.000.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m2')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<div class="mo" id="m3" onclick="closeOut(event,'m3')"><div class="mb"><button class="mcl" onclick="closeM('m3')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Cobertura duplex Centro Joinville"/><div class="md"><span class="mtag">Cobertura Duplex · Exclusivo</span><h2 class="mt">Cobertura Duplex — Centro de Joinville</h2><p class="ml">📍 Centro | Joinville, SC</p><p class="mp">R$ 5.350.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>7 Banheiros</div><div class="mfi"><span>🏙️</span>Duplex</div><div class="mfi"><span>⭐</span>Exclusivo</div></div><p class="mde">Cobertura duplex exclusiva no centro de Joinville com 4 dormitórios, 7 banheiros e vista privilegiada da cidade. Acabamento luxuoso, amplos terraços e infraestrutura de altíssimo nível.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20na%20Cobertura%20Duplex%20Centro%20R%24%205.350.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m3')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<div class="mo" id="m4" onclick="closeOut(event,'m4')"><div class="mb"><button class="mcl" onclick="closeM('m4')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Apartamento Glória Joinville"/><div class="md"><span class="mtag">Residencial</span><h2 class="mt">Apartamento Atiradores — Glória</h2><p class="ml">📍 Rua Euzébio de Queirós | Bairro Glória | Joinville, SC</p><p class="mp">R$ 1.290.000</p><div class="mf"><div class="mfi"><span>🛏</span>3 Dormitórios</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>219,54m²</div><div class="mfi"><span>🚗</span>Garagem</div></div><p class="mde">Apartamento espaçoso com 3 dormitórios e 219,54m² no bairro Glória. Excelente localização com fácil acesso ao centro de Joinville.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20no%20Apto%20Glória%20R%24%201.290.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m4')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<div class="mo" id="m5" onclick="closeOut(event,'m5')"><div class="mb"><button class="mcl" onclick="closeM('m5')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80" alt="Casa alto padrão Glória Joinville"/><div class="md"><span class="mtag">Casa · Alto Padrão</span><h2 class="mt">Casa de Alto Padrão — Bairro Glória</h2><p class="ml">📍 Bairro Glória | Joinville, SC</p><p class="mp">R$ 2.280.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>1.284,54m²</div><div class="mfi"><span>🌳</span>Área Verde</div></div><p class="mde">Casa de alto padrão com 4 dormitórios em terreno de 1.284,54m² no bairro Glória. Ampla área verde, acabamento de qualidade e excelente potencial de valorização.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20na%20Casa%20Glória%20R%24%202.280.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m5')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<div class="mo" id="m6" onclick="closeOut(event,'m6')"><div class="mb"><button class="mcl" onclick="closeM('m6')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Galpão industrial Araquari SC"/><div class="md"><span class="mtag">Industrial · Logística</span><h2 class="mt">Galpão Industrial — Araquari, SC</h2><p class="ml">📍 Araquari, Santa Catarina</p><p class="mp">R$ 25.000.000</p><div class="mf"><div class="mfi"><span>📐</span>40.000m²</div><div class="mfi"><span>🏗</span>Industrial</div><div class="mfi"><span>🚛</span>Logística</div><div class="mfi"><span>📍</span>Estratégico</div></div><p class="mde">Galpão industrial de grande porte em Araquari, região estratégica do norte de Santa Catarina. Acesso privilegiado a rodovias e porto. Ideal para empresas que buscam expansão no Brasil.</p><div class="ma"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20interesse%20no%20Galpão%20Araquari%20R%24%2025.000.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="closeM('m6')" class="mco">✉️ Enviar Mensagem</a></div></div></div></div>
-<section id="regioes" style="background:var(--dark);color:#fff">
+
+<section id="imoveis" style="padding:6rem 0;background:#fff">
 <div class="c">
-<p class="lbl" style="color:var(--gold)"><span data-lang="pt" class="active">Onde Atuamos</span><span data-lang="en">Where We Operate</span><span data-lang="fr">Où Nous Opérons</span></p>
-<h2 class="stl" style="color:#fff"><span data-lang="pt" class="active">Regiões de Atuação</span><span data-lang="en">Areas of Operation</span><span data-lang="fr">Zones d'Opération</span></h2>
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">Destaques</span><span data-lang="en">Featured Properties</span><span data-lang="fr">Biens en Vedette</span></p>
+<h2 class="st"><span data-lang="pt" class="active">Imóveis em Destaque</span><span data-lang="en">Featured Properties</span><span data-lang="fr">Biens Immobiliers</span></h2>
 <div class="gl"></div>
-<div class="rgrid">
+<p class="ss"><span data-lang="pt" class="active">Clique em qualquer imóvel para ver todos os detalhes.</span><span data-lang="en">Click any property for full details.</span><span data-lang="fr">Cliquez sur n'importe quel bien pour tous les détails.</span></p>
+<div class="pg fi">
+
+<article class="pc" onclick="oM('m1')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Apartamento alto padrão Rua Otto Boehm Joinville" loading="lazy"/><span class="ptag">Residencial</span></div>
+<div class="pb"><h3>Exclusividade — Rua Otto Boehm</h3><p class="ploc">📍 Bairro América | Joinville, SC</p><p class="ppr">R$ 2.150.000</p><div class="pf"><span>🛏 4 quartos</span><span>🚿 5 banheiros</span><span>🛋 Mobiliado</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+<article class="pc" onclick="oM('m2')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Apartamento 3 suítes América Joinville" loading="lazy"/><span class="ptag">Residencial</span></div>
+<div class="pb"><h3>Apartamento 3 Suítes — América</h3><p class="ploc">📍 Bairro América | Joinville, SC</p><p class="ppr">R$ 4.000.000</p><div class="pf"><span>🛏 3 suítes</span><span>🚿 4 banheiros</span><span>📐 422m²</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+<article class="pc" onclick="oM('m3')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Cobertura duplex Centro Joinville" loading="lazy"/><span class="ptag">Cobertura</span></div>
+<div class="pb"><h3>Cobertura Duplex — Centro</h3><p class="ploc">📍 Centro | Joinville, SC</p><p class="ppr">R$ 5.350.000</p><div class="pf"><span>🛏 4 quartos</span><span>🚿 7 banheiros</span><span>🏙️ Duplex</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+<article class="pc" onclick="oM('m4')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Apartamento Glória Joinville" loading="lazy"/><span class="ptag">Residencial</span></div>
+<div class="pb"><h3>Apartamento Atiradores — Glória</h3><p class="ploc">📍 Bairro Glória | Joinville, SC</p><p class="ppr">R$ 1.290.000</p><div class="pf"><span>🛏 3 dormitórios</span><span>🚿 4 banheiros</span><span>📐 219m²</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+<article class="pc" onclick="oM('m5')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Casa alto padrão Glória Joinville" loading="lazy"/><span class="ptag">Casa</span></div>
+<div class="pb"><h3>Casa Alto Padrão — Glória</h3><p class="ploc">📍 Bairro Glória | Joinville, SC</p><p class="ppr">R$ 2.280.000</p><div class="pf"><span>🛏 4 dormitórios</span><span>🚿 4 banheiros</span><span>📐 1.284m²</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+<article class="pc" onclick="oM('m6')">
+<div class="pi"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Galpão industrial Araquari SC" loading="lazy"/><span class="ptag">Industrial</span></div>
+<div class="pb"><h3>Galpão Industrial — Araquari</h3><p class="ploc">📍 Araquari, SC</p><p class="ppr">R$ 25.000.000</p><div class="pf"><span>📐 40.000m²</span><span>🏗 Industrial</span><span>🚛 Logística</span></div><span class="pcta">Ver Detalhes →</span></div>
+</article>
+
+</div>
+<div style="text-align:center;margin-top:2.5rem"><a href="#contato" class="btn btn-g"><span data-lang="pt" class="active">Consultar Mais Imóveis</span><span data-lang="en">Inquire About More Properties</span><span data-lang="fr">Plus de Biens</span></a></div>
+</div>
+</section>
+
+<div class="mo" id="m1" onclick="cO(event,'m1')"><div class="mb"><button class="mc2" onclick="cM2('m1')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Apartamento Rua Otto Boehm"/><div class="mcon"><span class="mtag">Residencial · Mobiliado</span><h2 class="mti">Exclusividade — Rua Otto Boehm</h2><p class="mlo">📍 Rua Otto Boehm | Bairro América | Joinville, SC</p><p class="mpr">R$ 2.150.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>5 Banheiros</div><div class="mfi"><span>🛋</span>Mobiliado</div><div class="mfi"><span>⭐</span>Alto Padrão</div></div><p class="mde">Apartamento de alto padrão totalmente mobiliado no bairro América, um dos endereços mais valorizados de Joinville. 4 dormitórios, 5 banheiros, acabamentos de primeira linha e localização privilegiada. Excelente oportunidade de investimento imobiliário em área de forte valorização em Santa Catarina.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20apartamento%20Rua%20Otto%20Boehm%20R%24%202.150.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m1')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<div class="mo" id="m2" onclick="cO(event,'m2')"><div class="mb"><button class="mc2" onclick="cM2('m2')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Apartamento 3 suítes América"/><div class="mcon"><span class="mtag">Residencial · Luxo</span><h2 class="mti">Apartamento 3 Suítes — Bairro América</h2><p class="mlo">📍 Bairro América | Joinville, SC</p><p class="mpr">R$ 4.000.000</p><div class="mf"><div class="mfi"><span>🛏</span>3 Suítes</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>422,10m²</div><div class="mfi"><span>⭐</span>Luxo</div></div><p class="mde">Apartamento de luxo com 3 suítes e 422,10m² no bairro América, região nobre de Joinville. Acabamento de altíssimo padrão, amplas áreas sociais e infraestrutura completa. Forte potencial de valorização. Ideal para investimento patrimonial no Brasil ou para brasileiros no exterior que desejam comprar imóvel com segurança.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20Apartamento%203%20Suítes%20América%20R%24%204.000.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m2')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<div class="mo" id="m3" onclick="cO(event,'m3')"><div class="mb"><button class="mc2" onclick="cM2('m3')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Cobertura duplex Centro Joinville"/><div class="mcon"><span class="mtag">Cobertura Duplex · Exclusivo</span><h2 class="mti">Cobertura Duplex — Centro de Joinville</h2><p class="mlo">📍 Centro | Joinville, SC</p><p class="mpr">R$ 5.350.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>7 Banheiros</div><div class="mfi"><span>🏙️</span>Duplex</div><div class="mfi"><span>⭐</span>Exclusivo</div></div><p class="mde">Cobertura duplex exclusiva no centro de Joinville com 4 dormitórios e 7 banheiros. Uma das vistas mais privilegiadas da cidade, acabamento luxuoso e amplos terraços. Um dos imóveis mais exclusivos disponíveis em Santa Catarina. Oportunidade única para investidores de alto padrão.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20na%20Cobertura%20Duplex%20Centro%20R%24%205.350.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m3')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<div class="mo" id="m4" onclick="cO(event,'m4')"><div class="mb"><button class="mc2" onclick="cM2('m4')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Apartamento Glória Joinville"/><div class="mcon"><span class="mtag">Residencial</span><h2 class="mti">Apartamento Atiradores — Glória</h2><p class="mlo">📍 Rua Euzébio de Queirós | Bairro Glória | Joinville, SC</p><p class="mpr">R$ 1.290.000</p><div class="mf"><div class="mfi"><span>🛏</span>3 Dormitórios</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>219,54m²</div><div class="mfi"><span>🚗</span>Garagem</div></div><p class="mde">Apartamento espaçoso com 3 dormitórios e 219,54m² no bairro Glória. Ótima localização com fácil acesso ao centro de Joinville. Excelente oportunidade para moradia ou investimento no mercado imobiliário de Santa Catarina.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20Apartamento%20Glória%20R%24%201.290.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m4')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<div class="mo" id="m5" onclick="cO(event,'m5')"><div class="mb"><button class="mc2" onclick="cM2('m5')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80" alt="Casa alto padrão Glória Joinville"/><div class="mcon"><span class="mtag">Casa · Alto Padrão</span><h2 class="mti">Casa Alto Padrão — Bairro Glória</h2><p class="mlo">📍 Bairro Glória | Joinville, SC</p><p class="mpr">R$ 2.280.000</p><div class="mf"><div class="mfi"><span>🛏</span>4 Dormitórios</div><div class="mfi"><span>🚿</span>4 Banheiros</div><div class="mfi"><span>📐</span>1.284,54m²</div><div class="mfi"><span>🌳</span>Área Verde</div></div><p class="mde">Casa de alto padrão com 4 dormitórios em terreno de 1.284,54m² no bairro Glória. Ampla área verde, acabamento de qualidade e excelente potencial de valorização. Ideal para famílias que buscam espaço, conforto e privacidade em Joinville, Santa Catarina.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20na%20Casa%20Glória%20R%24%202.280.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m5')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<div class="mo" id="m6" onclick="cO(event,'m6')"><div class="mb"><button class="mc2" onclick="cM2('m6')">✕</button><img class="mi" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Galpão industrial Araquari"/><div class="mcon"><span class="mtag">Industrial · Logística</span><h2 class="mti">Galpão Industrial — Araquari, SC</h2><p class="mlo">📍 Araquari, Santa Catarina</p><p class="mpr">R$ 25.000.000</p><div class="mf"><div class="mfi"><span>📐</span>40.000m²</div><div class="mfi"><span>🏗</span>Industrial</div><div class="mfi"><span>🚛</span>Logística</div><div class="mfi"><span>📍</span>Estratégico</div></div><p class="mde">Galpão industrial de grande porte em Araquari, região estratégica do norte de Santa Catarina. Acesso privilegiado a rodovias e porto. Ideal para empresas que buscam expansão no Brasil. Joinville e região formam o maior polo industrial do sul do Brasil, com forte demanda por espaços logísticos.</p><div class="mac"><a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20Galpão%20Industrial%20Araquari%20R%24%2025.000.000" target="_blank" class="mwa">📱 WhatsApp</a><a href="#contato" onclick="cM2('m6')" class="mct">✉️ Enviar Mensagem</a></div></div></div></div>
+
+<section id="regioes" style="padding:5rem 0;background:var(--dark);color:#fff">
+<div class="c">
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">Onde Atuamos</span><span data-lang="en">Where We Operate</span><span data-lang="fr">Où Nous Opérons</span></p>
+<h2 class="st" style="color:#fff"><span data-lang="pt" class="active">Regiões de Atuação</span><span data-lang="en">Areas of Operation</span><span data-lang="fr">Zones d'Opération</span></h2>
+<div class="gl"></div>
+<div class="rg">
 <div class="rc"><div class="ri">🏙️</div><h3>Joinville</h3><p><span data-lang="pt" class="active">Foco principal · Polo industrial</span><span data-lang="en">Main focus · Industrial hub</span><span data-lang="fr">Focus principal · Pôle industriel</span></p></div>
 <div class="rc"><div class="ri">🌊</div><h3>Balneário Camboriú</h3><p><span data-lang="pt" class="active">Luxo à beira-mar</span><span data-lang="en">Beachfront luxury</span><span data-lang="fr">Luxe en bord de mer</span></p></div>
 <div class="rc"><div class="ri">🏔️</div><h3>Florianópolis</h3><p><span data-lang="pt" class="active">Capital · Ilha da Magia</span><span data-lang="en">Capital · Magic Island</span><span data-lang="fr">Capitale · Île Magique</span></p></div>
@@ -268,61 +405,26 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem 0 1.5rem}
 </div>
 </div>
 </section>
-<section id="parceiros" style="background:var(--gray)">
+
+<section id="parceiros" style="padding:4rem 0;background:var(--gray)">
 <div class="c">
-<p class="lbl"><span data-lang="pt" class="active">Parceiros</span><span data-lang="en">Partners</span><span data-lang="fr">Partenaires</span></p>
-<h2 class="stl"><span data-lang="pt" class="active">Nossos Parceiros</span><span data-lang="en">Our Partners</span><span data-lang="fr">Nos Partenaires</span></h2>
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">Parceiros</span><span data-lang="en">Partners</span><span data-lang="fr">Partenaires</span></p>
+<h2 class="st"><span data-lang="pt" class="active">Nossos Parceiros</span><span data-lang="en">Our Partners</span><span data-lang="fr">Nos Partenaires</span></h2>
 <div class="gl"></div>
-<div class="parwrap">
-<div class="parcard"><a href="https://www.visitejoinville.com.br" target="_blank" rel="noopener">🏙️ Visite Joinville</a><p><span data-lang="pt" class="active">Turismo e informações sobre Joinville</span><span data-lang="en">Tourism and information about Joinville</span><span data-lang="fr">Tourisme et informations sur Joinville</span></p></div>
+<div class="pw">
+<div class="par"><a href="https://www.visitejoinville.com.br" target="_blank" rel="noopener">Visite Joinville</a><p><span data-lang="pt" class="active">Turismo e cultura em Joinville</span><span data-lang="en">Tourism and culture in Joinville</span><span data-lang="fr">Tourisme et culture à Joinville</span></p></div>
+<div class="par"><a href="https://mv.corretor.online/HomeRealtor" target="_blank" rel="noopener">MV Corretor Online</a><p><span data-lang="pt" class="active">Portfólio completo de imóveis</span><span data-lang="en">Full property portfolio</span><span data-lang="fr">Portefeuille complet de biens</span></p></div>
 </div>
 </div>
 </section>
-<section id="contato">
+
+<section id="contato" style="padding:6rem 0;background:#fff">
 <div class="c">
-<p class="lbl"><span data-lang="pt" class="active">Entre em Contato</span><span data-lang="en">Get in Touch</span><span data-lang="fr">Contactez-nous</span></p>
-<h2 class="stl"><span data-lang="pt" class="active">Fale com Nossa Equipe</span><span data-lang="en">Talk to Our Team</span><span data-lang="fr">Parlez à Notre Équipe</span></h2>
+<p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:.5rem"><span data-lang="pt" class="active">Entre em Contato</span><span data-lang="en">Get in Touch</span><span data-lang="fr">Contactez-nous</span></p>
+<h2 class="st"><span data-lang="pt" class="active">Fale com Nossa Equipe</span><span data-lang="en">Talk to Our Team</span><span data-lang="fr">Parlez à Notre Équipe</span></h2>
 <div class="gl"></div>
-<div class="cgrid">
+<div class="cg">
 <div class="ci">
 <h3><span data-lang="pt" class="active">Estamos Aqui para Ajudar</span><span data-lang="en">We Are Here to Help</span><span data-lang="fr">Nous Sommes Là pour Vous Aider</span></h3>
-<div class="cit"><div class="cion">📍</div><div><strong><span data-lang="pt" class="active">Escritório Principal</span><span data-lang="en">Main Office</span><span data-lang="fr">Bureau Principal</span></strong><span>Joinville, Santa Catarina, Brasil</span></div></div>
-<div class="cit"><div class="cion">📱</div><div><strong>WhatsApp</strong><a href="https://wa.me/5547992169689" target="_blank">+55 (47) 99216-9689</a></div></div>
-<div class="cit"><div class="cion">📸</div><div><strong>Instagram</strong><a href="https://instagram.com/mv.imoveis.sc" target="_blank">@mv.imoveis.sc</a></div></div>
-<div class="cit"><div class="cion">🇫🇷</div><div><strong><span data-lang="pt" class="active">Parceiro França</span><span data-lang="en">France Partner</span><span data-lang="fr">Partenaire France</span></strong><span>Toulouse, França</span></div></div>
-<div class="cit"><div class="cion">🏴</div><div><strong><span data-lang="pt" class="active">Parceiro Inglaterra</span><span data-lang="en">England Partner</span><span data-lang="fr">Partenaire Angleterre</span></strong><span>Londres, Inglaterra</span></div></div>
-</div>
-<div class="cf">
-<h3><span data-lang="pt" class="active">Envie uma Mensagem</span><span data-lang="en">Send a Message</span><span data-lang="fr">Envoyez un Message</span></h3>
-<div class="fr">
-<div class="fg"><label><span data-lang="pt" class="active">Nome</span><span data-lang="en">Name</span><span data-lang="fr">Nom</span></label><input type="text" placeholder="Seu nome"/></div>
-<div class="fg"><label>Email</label><input type="email" placeholder="seu@email.com"/></div>
-</div>
-<div class="fg"><label>WhatsApp</label><input type="tel" placeholder="+55 (47) 99999-9999"/></div>
-<div class="fg"><label><span data-lang="pt" class="active">Interesse</span><span data-lang="en">Interest</span><span data-lang="fr">Intérêt</span></label>
-<select>
-<option>Apartamento de Luxo</option>
-<option>Terreno Industrial</option>
-<option>Consultoria de Investimentos</option>
-<option>Imóvel para Brasileiro no Exterior</option>
-<option>Outro</option>
-</select>
-</div>
-<div class="fg"><label><span data-lang="pt" class="active">Mensagem</span><span data-lang="en">Message</span><span data-lang="fr">Message</span></label><textarea placeholder="Como podemos ajudar?"></textarea></div>
-<button class="btn bg" style="width:100%;padding:1rem;font-size:1rem;margin-top:.5rem" onclick="sendWA()"><span data-lang="pt" class="active">Enviar via WhatsApp</span><span data-lang="en">Send via WhatsApp</span><span data-lang="fr">Envoyer via WhatsApp</span></button>
-</div>
-</div>
-</div>
-</section>
-<footer>
-<div class="c">
-<div class="fgrid">
-<div class="fb">
-<div style="font-family:var(--fh);font-size:1.4rem;color:#fff">MV Imóveis<span style="display:block;font-size:.6rem;letter-spacing:3px;color:var(--gold);font-family:var(--fb);text-transform:uppercase">Joinville · Santa Catarina</span></div>
-<p>Imobiliária de alto padrão especializada em apartamentos de luxo, terrenos industriais e consultoria para investidores no Brasil e no exterior.</p>
-</div>
-<div class="fl">
-<h4><span data-lang="pt" class="active">Links Rápidos</span><span data-lang="en">Quick Links</span><span data-lang="fr">Liens Rapides</span></h4>
-<ul>
-<li><a href="#sobre"><span data-lang="pt" class="active">Sobre Nós</span><span data-lang="en">About Us</span><span data-lang="fr">À Propos</span></a>
+<div class="cit"><div class="cci">📍</div><div class="cit-t"><strong><span data-lang="pt" class="active">Escritório Principal</span><span data
 
