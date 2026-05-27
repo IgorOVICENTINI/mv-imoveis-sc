@@ -1,794 +1,286 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Imobiliária de luxo em Joinville, Santa Catarina. Apartamentos residenciais de alto padrão e terrenos industriais. Atendimento em português, inglês e francês." />
-  <meta name="keywords" content="imóveis joinville, apartamentos luxo santa catarina, terrenos industriais joinville, luxury real estate brazil, immobilier brésil joinville" />
-  <meta name="author" content="MV Imóveis Joinville" />
-  <meta property="og:title" content="MV Imóveis — Imóveis de Luxo em Joinville" />
-  <meta property="og:description" content="Apartamentos residenciais de alto padrão e terrenos industriais em Santa Catarina." />
-  <meta property="og:type" content="website" />
-  <title>MV Imóveis Joinville | Imóveis de Luxo</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="MV Imóveis — imobiliária de alto padrão em Joinville, Santa Catarina. Apartamentos de luxo, terrenos industriais estratégicos e consultoria imobiliária para investidores no Brasil e no exterior. Comprar imóvel no Brasil com segurança."/>
+<meta name="keywords" content="imobiliária de alto padrão no Brasil, imóveis de luxo no Brasil, comprar imóvel no Brasil, investir em imóveis no Brasil, imóveis para investimento no Brasil, consultoria imobiliária para investidores, imóveis comerciais Joinville, oportunidades imobiliárias no Brasil, investimento seguro em imóveis, imóveis para empresas no Brasil, expansão de empresas no Brasil, imóveis para brasileiros no exterior, comprar imóvel no Brasil morando fora, terrenos industriais Joinville, imóveis de alto padrão Joinville, imóveis de luxo Santa Catarina, imóveis alto padrão Santa Catarina, assessoria completa em compra de imóveis, patrimônio imobiliário no Brasil, imóveis com alto potencial de valorização"/>
+<meta name="author" content="MV Imóveis Joinville — Marcel Vicentini"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="MV Imóveis — Imóveis de Alto Padrão e Investimento Imobiliário no Brasil"/>
+<meta property="og:description" content="Apartamentos de luxo, terrenos industriais estratégicos e consultoria imobiliária para investidores. Joinville, Santa Catarina. Atendemos brasileiros no exterior e investidores estrangeiros."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<title>MV Imóveis Joinville | Imóveis de Alto Padrão e Investimento Imobiliário no Brasil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;--gold-light:#E8C96A;--dark:#0D1B2A;--dark2:#162234;
+  --white:#FFFFFF;--gray:#F5F5F5;--gray2:#E0E0E0;--text:#333333;--text-light:#666666;
+  --font-heading:'Playfair Display',serif;--font-body:'Inter',sans-serif;
+  --transition:0.3s ease;--shadow:0 4px 24px rgba(0,0,0,0.10);--shadow-hover:0 8px 40px rgba(0,0,0,0.18)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:90%;max-width:1200px;margin:0 auto}
+.section-title{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--dark);margin-bottom:0.5rem}
+.section-subtitle{color:var(--text-light);font-size:1rem;margin-bottom:2.5rem;max-width:640px}
+.gold-line{width:60px;height:3px;background:var(--gold);margin:0.8rem 0 1.5rem}
+.btn{display:inline-block;padding:0.85rem 2rem;border-radius:4px;font-weight:600;font-size:0.95rem;cursor:pointer;transition:var(--transition);border:none;letter-spacing:0.5px}
+.btn-gold{background:var(--gold);color:var(--dark)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.4)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--dark)}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+/* LANG */
+[data-lang]{display:none}
+[data-lang].active{display:block}
+.lang-switcher{display:flex;gap:0.5rem;align-items:center}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.3);color:var(--white);padding:0.3rem 0.7rem;border-radius:3px;cursor:pointer;font-size:0.8rem;font-weight:500;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{background:var(--gold);border-color:var(--gold);color:var(--dark)}
 
-  <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --gold:    #C9A84C;
-      --gold-light: #E8C96A;
-      --dark:    #0D1B2A;
-      --dark2:   #162234;
-      --white:   #FFFFFF;
-      --gray:    #F5F5F5;
-      --gray2:   #E0E0E0;
-      --text:    #333333;
-      --text-light: #666666;
-      --font-heading: 'Playfair Display', serif;
-      --font-body:    'Inter', sans-serif;
-      --transition: 0.3s ease;
-      --shadow: 0 4px 24px rgba(0,0,0,0.10);
-      --shadow-hover: 0 8px 40px rgba(0,0,0,0.18);
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    img { max-width: 100%; display: block; }
-    a  { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:var(--transition);background:transparent}
+.navbar.scrolled{background:var(--dark);padding:0.8rem 0;box-shadow:0 2px 20px rgba(0,0,0,0.3)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-heading);font-size:1.6rem;color:var(--white);display:flex;flex-direction:column;line-height:1.1}
+.logo span{font-size:0.65rem;letter-spacing:3px;color:var(--gold);font-family:var(--font-body);font-weight:500;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.85);font-size:0.9rem;font-weight:500;transition:var(--transition);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--gold);transition:var(--transition)}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;background:var(--dark);padding:1.5rem 5%;gap:1.2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,0.85);font-size:1rem;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:0.8rem}
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-    }
-    .section-subtitle {
-      color: var(--text-light);
-      font-size: 1rem;
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-    }
-    .gold-line {
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-      margin: 0.8rem 0 1.5rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: var(--transition);
-      border: none;
-      letter-spacing: 0.5px;
-    }
-    .btn-gold {
-      background: var(--gold);
-      color: var(--dark);
-    }
-    .btn-gold:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(201,168,76,0.4);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--gold);
-    }
-    .btn-outline:hover {
-      background: var(--gold);
-      color: var(--dark);
-    }
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,rgba(13,27,42,0.88) 0%,rgba(13,27,42,0.65) 100%),url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;text-align:center;color:var(--white);padding:8rem 0 4rem}
+.hero-content{max-width:820px;margin:0 auto}
+.hero-badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid var(--gold);color:var(--gold);padding:0.4rem 1.2rem;border-radius:50px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem}
+.hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,5.5vw,4rem);line-height:1.15;margin-bottom:1.2rem}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,0.82);margin-bottom:2.5rem;max-width:640px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-stats{display:flex;justify-content:center;gap:3rem;margin-top:4rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-number{font-family:var(--font-heading);font-size:2.2rem;color:var(--gold);font-weight:700}
+.stat-label{font-size:0.8rem;color:rgba(255,255,255,0.65);letter-spacing:1px;text-transform:uppercase}
 
-    /* ===== LANGUAGE SWITCHER ===== */
-    .lang-switcher {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-    .lang-btn {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.3);
-      color: var(--white);
-      padding: 0.3rem 0.7rem;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 500;
-      transition: var(--transition);
-      letter-spacing: 0.5px;
-    }
-    .lang-btn:hover,
-    .lang-btn.active {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--dark);
-    }
+/* SOBRE */
+#sobre{padding:6rem 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-image-wrap{position:relative}
+.about-image-wrap img{width:100%;border-radius:8px;object-fit:cover;height:480px}
+.about-badge-float{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--dark);padding:1.5rem;border-radius:8px;text-align:center;box-shadow:var(--shadow)}
+.about-badge-float strong{display:block;font-family:var(--font-heading);font-size:2.2rem}
+.about-badge-float span{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.about-flags{display:flex;gap:0.8rem;margin-top:1.5rem;flex-wrap:wrap}
+.flag-tag{display:flex;align-items:center;gap:0.5rem;background:var(--gray);padding:0.5rem 1rem;border-radius:50px;font-size:0.85rem;font-weight:500;color:var(--dark)}
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1.2rem 0;
-      transition: var(--transition);
-      background: transparent;
-    }
-    .navbar.scrolled {
-      background: var(--dark);
-      padding: 0.8rem 0;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .navbar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      color: var(--white);
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-    .logo span {
-      font-size: 0.65rem;
-      letter-spacing: 3px;
-      color: var(--gold);
-      font-family: var(--font-body);
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: var(--transition);
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px; left: 0;
-      width: 0; height: 2px;
-      background: var(--gold);
-      transition: var(--transition);
-    }
-    .nav-links a:hover { color: var(--white); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
+/* SERVIÇOS */
+#servicos{padding:6rem 0;background:var(--gray)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.service-card{background:var(--white);border-radius:10px;padding:2.5rem 2rem;box-shadow:var(--shadow);transition:var(--transition);border-top:3px solid transparent;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--gold);transition:var(--transition)}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-top-color:var(--gold)}
+.service-card:hover::before{width:100%}
+.service-icon{font-size:2.8rem;margin-bottom:1.2rem;display:block}
+.service-card h3{font-family:var(--font-heading);font-size:1.3rem;color:var(--dark);margin-bottom:0.8rem}
+.service-card p{color:var(--text-light);font-size:0.92rem;line-height:1.7}
 
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      transition: var(--transition);
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* IMÓVEIS */
+#imoveis{padding:6rem 0;background:var(--white)}
+.properties-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.property-card{border-radius:10px;overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);background:var(--white);cursor:pointer}
+.property-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.property-img{position:relative;height:230px;overflow:hidden}
+.property-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.property-card:hover .property-img img{transform:scale(1.06)}
+.property-tag{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--dark);padding:0.3rem 0.9rem;border-radius:50px;font-size:0.75rem;font-weight:700;text-transform:uppercase}
+.property-body{padding:1.5rem}
+.property-body h3{font-family:var(--font-heading);font-size:1.2rem;color:var(--dark);margin-bottom:0.4rem}
+.property-location{font-size:0.85rem;color:var(--text-light);margin-bottom:1rem}
+.property-price{font-size:1.4rem;font-weight:700;color:var(--gold);font-family:var(--font-heading);margin-bottom:1rem}
+.property-features{display:flex;gap:1rem;font-size:0.82rem;color:var(--text-light);border-top:1px solid var(--gray2);padding-top:1rem;flex-wrap:wrap}
+.prop-feat{display:flex;align-items:center;gap:0.3rem}
+.property-cta{display:inline-block;margin-top:1rem;padding:0.5rem 1.2rem;background:var(--gold);color:var(--dark);border-radius:4px;font-size:0.85rem;font-weight:600;transition:var(--transition)}
+.property-cta:hover{background:var(--gold-light)}
 
-    /* Mobile nav */
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: var(--dark);
-      padding: 1.5rem 5%;
-      gap: 1.2rem;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: rgba(255,255,255,0.85);
-      font-size: 1rem;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding-bottom: 0.8rem;
-    }
+/* MODAL */
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:2000;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--white);border-radius:12px;max-width:780px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.modal-close{position:absolute;top:1rem;right:1rem;background:var(--gold);border:none;color:var(--dark);width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer;font-weight:700;z-index:10;transition:var(--transition)}
+.modal-close:hover{background:var(--gold-light)}
+.modal-img{width:100%;height:280px;object-fit:cover;border-radius:12px 12px 0 0}
+.modal-content{padding:2rem}
+.modal-tag{display:inline-block;background:var(--gold);color:var(--dark);padding:0.3rem 0.9rem;border-radius:50px;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:1rem}
+.modal-title{font-family:var(--font-heading);font-size:1.8rem;color:var(--dark);margin-bottom:0.5rem}
+.modal-location{font-size:0.9rem;color:var(--text-light);margin-bottom:1rem}
+.modal-price{font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-heading);margin-bottom:1.5rem}
+.modal-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1.5rem}
+.modal-feat{background:var(--gray);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem;color:var(--dark);font-weight:500}
+.modal-feat span{display:block;font-size:1.2rem;margin-bottom:0.3rem}
+.modal-desc{color:var(--text-light);line-height:1.8;margin-bottom:1.5rem;font-size:0.95rem}
+.modal-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.modal-actions a{flex:1;text-align:center;padding:0.85rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.95rem;transition:var(--transition)}
+.modal-wa{background:#25D366;color:var(--white)}
+.modal-wa:hover{background:#1da851}
+.modal-contact{background:var(--gold);color:var(--dark)}
+.modal-contact:hover{background:var(--gold-light)}
 
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(135deg, rgba(13,27,42,0.85) 0%, rgba(13,27,42,0.6) 100%),
-        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: var(--white);
-      padding: 8rem 0 4rem;
-    }
-    .hero-content { max-width: 800px; margin: 0 auto; }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(201,168,76,0.15);
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 0.4rem 1.2rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(2.2rem, 5.5vw, 4rem);
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 em {
-      color: var(--gold);
-      font-style: normal;
-    }
-    .hero p {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      margin-top: 4rem;
-      flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat-number {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-      color: var(--gold);
-      font-weight: 700;
-    }
-    .stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+/* REGIÕES */
+#regioes{padding:5rem 0;background:var(--dark);color:var(--white)}
+.regions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}
+.region-card{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:1.8rem;text-align:center;transition:var(--transition)}
+.region-card:hover{background:rgba(201,168,76,0.1);border-color:var(--gold)}
+.region-card h3{font-family:var(--font-heading);font-size:1.15rem;margin-bottom:0.4rem}
+.region-card p{font-size:0.82rem;color:rgba(255,255,255,0.55)}
+.region-icon{font-size:2rem;margin-bottom:0.8rem}
 
-    /* ===== ABOUT ===== */
-    #sobre { padding: 6rem 0; background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .about-image-wrap {
-      position: relative;
-    }
-    .about-image-wrap img {
-      width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
-      height: 480px;
-    }
-    .about-badge-float {
-      position: absolute;
-      bottom: -1.5rem;
-      right: -1.5rem;
-      background: var(--gold);
-      color: var(--dark);
-      padding: 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    .about-badge-float strong {
-      display: block;
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-    }
-    .about-badge-float span {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .about-flags {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .flag-tag {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gray);
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--dark);
-    }
+/* PARCEIROS */
+#parceiros{padding:4rem 0;background:var(--gray)}
+.parceiros-grid{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:2rem}
+.parceiro-card{background:var(--white);border-radius:10px;padding:1.5rem 2rem;box-shadow:var(--shadow);text-align:center;transition:var(--transition);min-width:220px}
+.parceiro-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.parceiro-card a{color:var(--gold);font-weight:600;font-size:0.95rem}
+.parceiro-card p{font-size:0.82rem;color:var(--text-light);margin-top:0.4rem}
 
-    /* ===== SERVICES ===== */
-    #servicos { padding: 6rem 0; background: var(--gray); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .service-card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 2.5rem 2rem;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      border-top: 3px solid transparent;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 3px;
-      background: var(--gold);
-      transition: var(--transition);
-    }
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-      border-top-color: var(--gold);
-    }
-    .service-card:hover::before { width: 100%; }
-    .service-icon {
-      font-size: 2.8rem;
-      margin-bottom: 1.2rem;
-      display: block;
-    }
-    .service-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.3rem;
-      color: var(--dark);
-      margin-bottom: 0.8rem;
-    }
-    .service-card p {
-      color: var(--text-light);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
+/* CONTATO */
+#contato{padding:6rem 0;background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.contact-info h3{font-family:var(--font-heading);font-size:1.5rem;color:var(--dark);margin-bottom:1.5rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.contact-icon{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-item-text strong{display:block;font-size:0.9rem;color:var(--dark);margin-bottom:0.2rem}
+.contact-item-text span,.contact-item-text a{font-size:0.88rem;color:var(--text-light)}
+.contact-item-text a:hover{color:var(--gold)}
+.contact-form{background:var(--gray);padding:2.5rem;border-radius:10px;box-shadow:var(--shadow)}
+.contact-form h3{font-family:var(--font-heading);font-size:1.4rem;color:var(--dark);margin-bottom:1.5rem}
+.form-group{margin-bottom:1.2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group label{display:block;font-size:0.85rem;font-weight:600;color:var(--dark);margin-bottom:0.4rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.8rem 1rem;border:1.5px solid var(--gray2);border-radius:6px;font-family:var(--font-body);font-size:0.9rem;color:var(--text);transition:var(--transition);background:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,0.15)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-submit{width:100%;padding:1rem;font-size:1rem;margin-top:0.5rem}
 
-    /* ===== PROPERTIES ===== */
-    #imoveis { padding: 6rem 0; background: var(--white); }
-    .properties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-    .property-card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      background: var(--white);
-    }
-    .property-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-    }
-    .property-img {
-      position: relative;
-      height: 230px;
-      overflow: hidden;
-    }
-    .property-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .property-card:hover .property-img img {
-      transform: scale(1.06);
-    }
-    .property-tag {
-      position: absolute;
-      top: 1rem; left: 1rem;
-      background: var(--gold);
-      color: var(--dark);
-      padding: 0.3rem 0.9rem;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .property-body { padding: 1.5rem; }
-    .property-body h3 {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      color: var(--dark);
-      margin-bottom: 0.4rem;
-    }
-    .property-location {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .property-price {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      margin-bottom: 1rem;
-    }
-    .property-features {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.82rem;
-      color: var(--text-light);
-      border-top: 1px solid var(--gray2);
-      padding-top: 1rem;
-      flex-wrap: wrap;
-    }
-    .prop-feat {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,0.7);padding:3.5rem 0 1.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:0.88rem;line-height:1.7;margin-top:1rem;max-width:300px}
+.footer-links h4,.footer-contact h4{font-family:var(--font-heading);color:var(--white);margin-bottom:1rem;font-size:1.05rem}
+.footer-links ul,.footer-contact ul{display:flex;flex-direction:column;gap:0.6rem}
+.footer-links a{font-size:0.88rem;transition:var(--transition)}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact li{font-size:0.88rem;display:flex;align-items:flex-start;gap:0.5rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.82rem}
+.seo-tags{margin-top:1rem;font-size:0.75rem;color:rgba(255,255,255,0.3);line-height:1.8}
 
-    /* ===== REGIONS ===== */
-    #regioes {
-      padding: 5rem 0;
-      background: var(--dark);
-      color: var(--white);
-    }
-    .regions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .region-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 8px;
-      padding: 1.8rem;
-      text-align: center;
-      transition: var(--transition);
-      cursor: default;
-    }
-    .region-card:hover {
-      background: rgba(201,168,76,0.1);
-      border-color: var(--gold);
-    }
-    .region-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      margin-bottom: 0.4rem;
-    }
-    .region-card p {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
-    }
-    .region-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;background:var(--gold);color:var(--dark);border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:var(--transition);z-index:999;box-shadow:0 4px 16px rgba(201,168,76,0.4)}
+.scroll-top.visible{opacity:1;transform:translateY(0)}
+.scroll-top:hover{background:var(--gold-light)}
 
-    /* ===== CONTACT ===== */
-    #contato { padding: 6rem 0; background: var(--gray); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    .contact-info h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      color: var(--dark);
-      margin-bottom: 1.5rem;
-    }
-    .contact-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-    }
-    .contact-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .contact-item-text strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--dark);
-      margin-bottom: 0.2rem;
-    }
-    .contact-item-text span {
-      font-size: 0.88rem;
-      color: var(--text-light);
-    }
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:2rem;left:2rem;background:#25D366;color:white;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 16px rgba(37,211,102,0.4);z-index:999;transition:var(--transition)}
+.whatsapp-float:hover{transform:scale(1.1)}
 
-    /* Form */
-    .contact-form {
-      background: var(--white);
-      padding: 2.5rem;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-    }
-    .contact-form h3 {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      color: var(--dark);
-      margin-bottom: 1.5rem;
-    }
-    .form-group { margin-bottom: 1.2rem; }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 0.4rem;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1.5px solid var(--gray2);
-      border-radius: 6px;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      color: var(--text);
-      transition: var(--transition);
-      background: var(--white);
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
-    }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-submit { width: 100%; padding: 1rem; font-size: 1rem; margin-top: 0.5rem; }
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-      color: #2e7d32;
-    }
+/* FADE IN */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.7);
-      padding: 3.5rem 0 1.5rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-    .footer-brand p {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-top: 1rem;
-      max-width: 300px;
-    }
-    .footer-links h4,
-    .footer-contact h4 {
-      font-family: var(--font-heading);
-      color: var(--white);
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
-    }
-    .footer-links ul,
-    .footer-contact ul {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .footer-links a {
-      font-size: 0.88rem;
-      transition: var(--transition);
-    }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-contact li {
-      font-size: 0.88rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.82rem;
-    }
-
-    /* ===== SCROLL TO TOP ===== */
-    .scroll-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 46px;
-      height: 46px;
-      background: var(--gold);
-      color: var(--dark);
-      border: none;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: var(--transition);
-      z-index: 999;
-      box-shadow: 0 4px 16px rgba(201,168,76,0.4);
-    }
-    .scroll-top.visible { opacity: 1; transform: translateY(0); }
-    .scroll-top:hover { background: var(--gold-light); transform: translateY(-3px); }
-
-    /* ===== WHATSAPP FLOAT ===== */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 2rem;
-      left: 2rem;
-      background: #25D366;
-      color: white;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
-      z-index: 999;
-      transition: var(--transition);
-      text-decoration: none;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-image-wrap { display: none; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
-    @media (max-width: 600px) {
-      .hero-stats { gap: 1.5rem; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .about-badge-float { display: none; }
-    }
-
-    /* ===== LANGUAGE HIDE/SHOW ===== */
-    [data-lang] { display: none; }
-    [data-lang].active { display: block; }
-    .inline-lang { display: none; }
-    .inline-lang.active { display: inline; }
-
-    /* ===== ANIMATIONS ===== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .about-image-wrap{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .hero-stats{gap:1.5rem}
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .about-badge-float{display:none}
+  .modal-features{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
   <div class="container">
-    <a href="#hero" class="logo" aria-label="MV Imóveis Home">
+    <a href="#hero" class="logo">
       MV Imóveis
       <span>Joinville · Santa Catarina</span>
     </a>
-    <ul class="nav-links" role="list">
-      <li><a href="#sobre"    data-nav="sobre">Sobre</a></li>
-      <li><a href="#servicos" data-nav="servicos">Serviços</a></li>
-      <li><a href="#imoveis"  data-nav="imoveis">Imóveis</a></li>
-      <li><a href="#regioes"  data-nav="regioes">Regiões</a></li>
-      <li><a href="#contato"  data-nav="contato">Contato</a></li>
+    <ul class="nav-links">
+      <li><a href="#sobre">
+        <span data-lang="pt" class="active">Sobre</span>
+        <span data-lang="en">About</span>
+        <span data-lang="fr">À Propos</span>
+      </a></li>
+      <li><a href="#servicos">
+        <span data-lang="pt" class="active">Serviços</span>
+        <span data-lang="en">Services</span>
+        <span data-lang="fr">Services</span>
+      </a></li>
+      <li><a href="#imoveis">
+        <span data-lang="pt" class="active">Imóveis</span>
+        <span data-lang="en">Properties</span>
+        <span data-lang="fr">Biens</span>
+      </a></li>
+      <li><a href="#regioes">
+        <span data-lang="pt" class="active">Regiões</span>
+        <span data-lang="en">Regions</span>
+        <span data-lang="fr">Régions</span>
+      </a></li>
+      <li><a href="#contato">
+        <span data-lang="pt" class="active">Contato</span>
+        <span data-lang="en">Contact</span>
+        <span data-lang="fr">Contact</span>
+      </a></li>
     </ul>
     <div class="nav-right">
-      <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
-        <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português" title="Português">PT</button>
-        <button class="lang-btn"        onclick="setLang('en')" aria-label="English"   title="English">EN</button>
-        <button class="lang-btn"        onclick="setLang('fr')" aria-label="Français"  title="Français">FR</button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('fr')">FR</button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </nav>
 
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
-  <a href="#sobre"    onclick="closeMenu()" data-nav="sobre">Sobre</a>
-  <a href="#servicos" onclick="closeMenu()" data-nav="servicos">Serviços</a>
-  <a href="#imoveis"  onclick="closeMenu()" data-nav="imoveis">Imóveis</a>
-  <a href="#regioes"  onclick="closeMenu()" data-nav="regioes">Regiões</a>
-  <a href="#contato"  onclick="closeMenu()" data-nav="contato">Contato</a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" onclick="closeMenu()">Sobre</a>
+  <a href="#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="#imoveis" onclick="closeMenu()">Imóveis</a>
+  <a href="#regioes" onclick="closeMenu()">Regiões</a>
+  <a href="#contato" onclick="closeMenu()">Contato</a>
 </div>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero" aria-label="Bem-vindo">
+<!-- HERO -->
+<section class="hero" id="hero">
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">
@@ -797,20 +289,14 @@
         <span data-lang="fr">✦ Joinville · Santa Catarina · Brésil</span>
       </div>
       <h1>
-        <span data-lang="pt" class="active">Imóveis de <em>Alto Padrão</em><br>em Santa Catarina</span>
-        <span data-lang="en">Premium <em>Real Estate</em><br>in Santa Catarina</span>
-        <span data-lang="fr">Immobilier <em>de Prestige</em><br>à Santa Catarina</span>
+        <span data-lang="pt" class="active">Imóveis de <em>Alto Padrão</em><br>e Investimento Imobiliário no Brasil</span>
+        <span data-lang="en">Premium <em>Real Estate</em><br>and Property Investment in Brazil</span>
+        <span data-lang="fr">Immobilier <em>de Prestige</em><br>et Investissement au Brésil</span>
       </h1>
       <p>
-        <span data-lang="pt" class="active">
-          Apartamentos residenciais de luxo e terrenos industriais estratégicos. Atendemos clientes no Brasil e no exterior, com parceiros em Joinville, Curitiba, Toulouse (França) e Londres (Inglaterra).
-        </span>
-        <span data-lang="en">
-          Luxury residential apartments and strategic industrial land. We serve clients in Brazil and abroad, with partners in Joinville, Curitiba, Toulouse (France) and London (England).
-        </span>
-        <span data-lang="fr">
-          Appartements résidentiels de luxe et terrains industriels stratégiques. Nous servons des clients au Brésil et à l'étranger, avec des partenaires à Joinville, Curitiba, Toulouse (France) et Londres (Angleterre).
-        </span>
+        <span data-lang="pt" class="active">Apartamentos residenciais de luxo e terrenos industriais estratégicos. Consultoria imobiliária para investidores no Brasil e no exterior. Parceiros em Joinville, Curitiba, Toulouse (França) e Londres (Inglaterra).</span>
+        <span data-lang="en">Luxury residential apartments and strategic industrial land. Real estate consulting for investors in Brazil and abroad. Partners in Joinville, Curitiba, Toulouse (France) and London (England).</span>
+        <span data-lang="fr">Appartements résidentiels de luxe et terrains industriels stratégiques. Conseil immobilier pour investisseurs au Brésil et à l'étranger. Partenaires à Joinville, Curitiba, Toulouse et Londres.</span>
       </p>
       <div class="hero-btns">
         <a href="#imoveis" class="btn btn-gold">
@@ -824,10 +310,9 @@
           <span data-lang="fr">Contactez-nous</span>
         </a>
       </div>
-
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-number">10+</div>
+          <div class="stat-number">15+</div>
           <div class="stat-label">
             <span data-lang="pt" class="active">Anos de Mercado</span>
             <span data-lang="en">Years in Market</span>
@@ -843,7 +328,7 @@
           </div>
         </div>
         <div class="stat">
-          <div class="stat-number">3</div>
+          <div class="stat-number">4</div>
           <div class="stat-label">
             <span data-lang="pt" class="active">Países Atendidos</span>
             <span data-lang="en">Countries Served</span>
@@ -855,16 +340,12 @@
   </div>
 </section>
 
-<!-- ===== SOBRE ===== -->
-<section id="sobre" aria-labelledby="sobre-title">
+<!-- SOBRE -->
+<section id="sobre" style="padding:6rem 0;background:var(--white)">
   <div class="container">
     <div class="about-grid">
       <div class="about-image-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
-          alt="Equipe MV Imóveis Joinville"
-          loading="lazy"
-        />
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Consultoria imobiliária de alto padrão Joinville MV Imóveis" loading="lazy"/>
         <div class="about-badge-float">
           <strong>15+</strong>
           <span>
@@ -874,74 +355,32 @@
           </span>
         </div>
       </div>
-
       <div class="about-text fade-in">
-        <p class="section-subtitle" style="color:var(--gold); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem;">
+        <p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:0.82rem;margin-bottom:0.5rem">
           <span data-lang="pt" class="active">Sobre Nós</span>
           <span data-lang="en">About Us</span>
           <span data-lang="fr">À Propos</span>
         </p>
-
-        <h2 class="section-title" id="sobre-title">
-          <span data-lang="pt" class="active">Conectando Investidores ao Melhor de Santa Catarina</span>
-          <span data-lang="en">Connecting Investors to the Best of Santa Catarina</span>
-          <span data-lang="fr">Connecter les Investisseurs au Meilleur de Santa Catarina</span>
+        <h2 class="section-title">
+          <span data-lang="pt" class="active">Consultoria Imobiliária para Investidores no Brasil e no Exterior</span>
+          <span data-lang="en">Real Estate Consulting for Investors in Brazil and Abroad</span>
+          <span data-lang="fr">Conseil Immobilier pour Investisseurs au Brésil et à l'Étranger</span>
         </h2>
-
         <div class="gold-line"></div>
-
-        <p style="color:var(--text-light); line-height:1.8; margin-bottom:1.2rem;">
-          <span data-lang="pt" class="active">
-            Na MV Imóveis, cada imóvel é escolhido como se fosse nosso. Atuamos com foco em imóveis de alto padrão, localizados nos melhores bairros da região, com excelente infraestrutura, segurança, serviços de alto nível e forte potencial de valorização.
-          </span>
-          <span data-lang="en">
-            At MV Imóveis, each property is selected as if it were our own. We focus on high-standard properties located in the best neighborhoods of the region, with excellent infrastructure, security, premium services, and strong appreciation potential.
-          </span>
-          <span data-lang="fr">
-            Chez MV Imóveis, chaque bien est choisi comme s’il était le nôtre. Nous travaillons avec des biens de haut standing situés dans les meilleurs quartiers de la région, avec une excellente infrastructure, sécurité, services de haut niveau et un fort potentiel de valorisation.
-          </span>
+        <p style="color:var(--text-light);line-height:1.8;margin-bottom:1.2rem">
+          <span data-lang="pt" class="active">Na MV Imóveis, cada imóvel é escolhido como se fosse nosso. Atuamos com foco em imóveis de alto padrão, localizados nos melhores bairros da região, com excelente infraestrutura, segurança, serviços de alto nível e forte potencial de valorização.</span>
+          <span data-lang="en">At MV Imóveis, each property is selected as if it were our own. We focus on high-standard properties in the best neighborhoods, with excellent infrastructure, security, premium services, and strong appreciation potential.</span>
+          <span data-lang="fr">Chez MV Imóveis, chaque bien est choisi comme s'il était le nôtre. Nous travaillons avec des biens de haut standing dans les meilleurs quartiers, avec une excellente infrastructure et un fort potentiel de valorisation.</span>
         </p>
-
-        <p style="color:var(--text-light); line-height:1.8; margin-bottom:1.8rem;">
-          <span data-lang="pt" class="active">
-            Nossa equipe une experiência de mercado, visão estratégica e atendimento discreto para orientar decisões de moradia e investimento com máxima segurança. Do mapeamento das melhores oportunidades à negociação e conclusão da transação, você conta com uma consultoria completa, transparente e personalizada.
-            <br><br>
-            Investir bem é investir em localização, qualidade e solidez patrimonial. Quem investe em terra, não erra.
-            <br><br>
-            Entre em contato e descubra, em uma conversa objetiva e reservada, quais são hoje as melhores oportunidades para o seu perfil.
-          </span>
-          <span data-lang="en">
-            Our team combines market experience, strategic vision, and discreet service to guide housing and investment decisions with maximum security. From mapping the best opportunities to negotiation and closing, you have complete, transparent, and personalized advisory support.
-            <br><br>
-            To invest well is to invest in location, quality, and solid assets. Those who invest in land rarely go wrong.
-            <br><br>
-            Get in touch and, in a direct and confidential conversation, discover the best opportunities available today for your profile.
-          </span>
-          <span data-lang="fr">
-            Notre équipe allie expérience de marché, vision stratégique et service discret pour orienter les décisions de logement et d’investissement avec un maximum de sécurité. De la sélection des meilleures opportunités à la négociation et la conclusion de la transaction, vous bénéficiez d’un accompagnement complet, transparent et personnalisé.
-            <br><br>
-            Bien investir, c’est investir dans l’emplacement, la qualité et la solidité patrimoniale. Ceux qui investissent dans la terre ne se trompent pas.
-            <br><br>
-            Contactez-nous et découvrez, lors d’une conversation directe et confidentielle, quelles sont aujourd’hui les meilleures opportunités pour votre profil.
-          </span>
+        <p style="color:var(--text-light);line-height:1.8;margin-bottom:1.8rem">
+          <span data-lang="pt" class="active">Nossa equipe une experiência de mercado, visão estratégica e atendimento discreto para orientar decisões de moradia e investimento com máxima segurança. Do mapeamento das melhores oportunidades à negociação e conclusão da transação, você conta com uma assessoria completa, transparente e personalizada.<br><br>Investir bem é investir em localização, qualidade e solidez patrimonial. Quem investe em terra, não erra.<br><br>Entre em contato e descubra, em uma conversa objetiva e reservada, quais são hoje as melhores oportunidades para o seu perfil.</span>
+          <span data-lang="en">Our team combines market experience, strategic vision, and discreet service to guide housing and investment decisions with maximum security. From mapping the best opportunities to negotiation and closing, you have complete, transparent, and personalized advisory support.<br><br>To invest well is to invest in location, quality, and solid assets. Those who invest in land rarely go wrong.<br><br>Get in touch and discover the best opportunities available today for your profile.</span>
+          <span data-lang="fr">Notre équipe allie expérience de marché, vision stratégique et service discret. De la sélection des meilleures opportunités à la négociation, vous bénéficiez d'un accompagnement complet et personnalisé.<br><br>Bien investir, c'est investir dans l'emplacement, la qualité et la solidité patrimoniale.<br><br>Contactez-nous pour découvrir les meilleures opportunités pour votre profil.</span>
         </p>
-
         <div class="about-flags">
-          <div class="flag-tag">🇧🇷
-            <span data-lang="pt" class="active">Joinville · Curitiba</span>
-            <span data-lang="en">Joinville · Curitiba</span>
-            <span data-lang="fr">Joinville · Curitiba</span>
-          </div>
-          <div class="flag-tag">🇫🇷
-            <span data-lang="pt" class="active">Toulouse, França</span>
-            <span data-lang="en">Toulouse, France</span>
-            <span data-lang="fr">Toulouse, France</span>
-          </div>
-          <div class="flag-tag">🏴
-            <span data-lang="pt" class="active">Londres, Inglaterra</span>
-            <span data-lang="en">London, England</span>
-            <span data-lang="fr">Londres, Angleterre</span>
-          </div>
+          <div class="flag-tag">🇧🇷 Joinville · Curitiba</div>
+          <div class="flag-tag">🇫🇷 Toulouse, França</div>
+          <div class="flag-tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Londres, Inglaterra</div>
           <div class="flag-tag">🌍
             <span data-lang="pt" class="active">Atendimento Internacional</span>
             <span data-lang="en">International Service</span>
@@ -953,264 +392,199 @@
   </div>
 </section>
 
-<!-- ===== SERVIÇOS ===== -->
-<section id="servicos" aria-labelledby="servicos-title">
+<!-- SERVIÇOS -->
+<section id="servicos" style="padding:6rem 0;background:var(--gray)">
   <div class="container">
-    <p class="section-subtitle" style="color:var(--gold); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem;">
+    <p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:0.82rem;margin-bottom:0.5rem">
       <span data-lang="pt" class="active">O Que Oferecemos</span>
       <span data-lang="en">What We Offer</span>
       <span data-lang="fr">Ce Que Nous Offrons</span>
     </p>
-    <h2 class="section-title" id="servicos-title">
+    <h2 class="section-title">
       <span data-lang="pt" class="active">Nossos Serviços</span>
       <span data-lang="en">Our Services</span>
       <span data-lang="fr">Nos Services</span>
     </h2>
     <div class="gold-line"></div>
-
     <p class="section-subtitle">
-      <span data-lang="pt" class="active">
-        Vendas de imóveis top: imóveis selecionados com critério, foco em alto padrão e excelente potencial de valorização.
-      </span>
-      <span data-lang="en">
-        High-end property sales: carefully selected listings with strong appreciation potential.
-      </span>
-      <span data-lang="fr">
-        Vente de biens haut de gamme : propriétés sélectionnées avec soin et fort potentiel de valorisation.
-      </span>
+      <span data-lang="pt" class="active">Vendas de imóveis top: imóveis selecionados com critério, foco em alto padrão e excelente potencial de valorização. Soluções completas para quem quer comprar imóvel no Brasil com segurança.</span>
+      <span data-lang="en">High-end property sales: carefully selected listings focused on luxury and strong appreciation. Complete solutions for buying property in Brazil safely.</span>
+      <span data-lang="fr">Vente de biens haut de gamme sélectionnés avec soin. Solutions complètes pour acheter un bien au Brésil en toute sécurité.</span>
     </p>
-
     <div class="services-grid fade-in">
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">🏢</span>
-        <h3>
-          <span data-lang="pt" class="active">Apartamentos de Luxo</span>
-          <span data-lang="en">Luxury Apartments</span>
-          <span data-lang="fr">Appartements de Luxe</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Residências de alto padrão em Joinville e em todo o estado de Santa Catarina. Acabamentos nobres, localização privilegiada e infraestrutura completa.</span>
-          <span data-lang="en">High-end residences in Joinville and throughout Santa Catarina. Noble finishes, prime locations, and full infrastructure.</span>
-          <span data-lang="fr">Résidences haut de gamme à Joinville et dans tout Santa Catarina. Finitions nobles, emplacements privilégiés et infrastructure complète.</span>
-        </p>
+        <span class="service-icon">🏢</span>
+        <h3><span data-lang="pt" class="active">Apartamentos de Luxo</span><span data-lang="en">Luxury Apartments</span><span data-lang="fr">Appartements de Luxe</span></h3>
+        <p><span data-lang="pt" class="active">Imóveis de alto padrão para renda e moradia em Joinville e Santa Catarina. Acabamentos nobres, localização privilegiada e infraestrutura completa.</span><span data-lang="en">High-end properties for income and living in Joinville and Santa Catarina. Noble finishes, prime locations, and full infrastructure.</span><span data-lang="fr">Biens haut de gamme à Joinville et Santa Catarina. Finitions nobles, emplacements privilégiés.</span></p>
       </article>
-
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">🏭</span>
-        <h3>
-          <span data-lang="pt" class="active">Terrenos Industriais</span>
-          <span data-lang="en">Industrial Land</span>
-          <span data-lang="fr">Terrains Industriels</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Áreas estratégicas para instalação de indústrias e galpões logísticos em Santa Catarina. Joinville é o maior polo industrial do sul do Brasil.</span>
-          <span data-lang="en">Strategic areas for industrial plants and logistics warehouses in Santa Catarina. Joinville is the largest industrial hub in southern Brazil.</span>
-          <span data-lang="fr">Zones stratégiques pour l'installation d'usines et d'entrepôts logistiques à Santa Catarina. Joinville est le plus grand pôle industriel du sud du Brésil.</span>
-        </p>
+        <span class="service-icon">🏭</span>
+        <h3><span data-lang="pt" class="active">Terrenos Industriais Estratégicos</span><span data-lang="en">Strategic Industrial Land</span><span data-lang="fr">Terrains Industriels Stratégiques</span></h3>
+        <p><span data-lang="pt" class="active">Terrenos e imóveis para expansão de empresas no Brasil. Joinville é o maior polo industrial do sul do Brasil, ideal para instalação de indústrias e galpões logísticos.</span><span data-lang="en">Land and properties for business expansion in Brazil. Joinville is the largest industrial hub in southern Brazil.</span><span data-lang="fr">Terrains pour l'expansion d'entreprises au Brésil. Joinville est le plus grand pôle industriel du sud du Brésil.</span></p>
       </article>
-
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">🌐</span>
-        <h3>
-          <span data-lang="pt" class="active">Atendimento Internacional</span>
-          <span data-lang="en">International Service</span>
-          <span data-lang="fr">Service International</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Assessoria completa para brasileiros no exterior e investidores estrangeiros. Parceiros em Toulouse e Londres facilitando o contato com clientes europeus.</span>
-          <span data-lang="en">Full advisory for Brazilians abroad and foreign investors. Partners in Toulouse and London facilitating contact with European clients.</span>
-          <span data-lang="fr">Conseil complet pour les Brésiliens à l'étranger et les investisseurs étrangers. Partenaires à Toulouse et Londres facilitant le contact avec les clients européens.</span>
-        </p>
+        <span class="service-icon">🌐</span>
+        <h3><span data-lang="pt" class="active">Imóveis para Brasileiros no Exterior</span><span data-lang="en">Properties for Brazilians Abroad</span><span data-lang="fr">Biens pour Brésiliens à l'Étranger</span></h3>
+        <p><span data-lang="pt" class="active">Ajuda para comprar imóvel no Brasil morando fora. Assessoria completa para brasileiros no exterior que desejam investir em imóveis no Brasil com segurança.</span><span data-lang="en">Help buying property in Brazil while living abroad. Full advisory for Brazilians overseas looking to invest safely.</span><span data-lang="fr">Aide pour acheter un bien au Brésil depuis l'étranger. Accompagnement complet pour les Brésiliens souhaitant investir.</span></p>
       </article>
-
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">📊</span>
-        <h3>
-          <span data-lang="pt" class="active">Consultoria de Investimentos</span>
-          <span data-lang="en">Investment Consulting</span>
-          <span data-lang="fr">Conseil en Investissement</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Análise de mercado, valorização de ativos e orientação sobre o melhor retorno para seu investimento no mercado imobiliário catarinense.</span>
-          <span data-lang="en">Market analysis, asset appreciation, and guidance on the best return on investment in Santa Catarina's real estate market.</span>
-          <span data-lang="fr">Analyse de marché, valorisation des actifs et orientation sur le meilleur retour sur investissement dans l'immobilier de Santa Catarina.</span>
-        </p>
+        <span class="service-icon">📊</span>
+        <h3><span data-lang="pt" class="active">Consultoria de Investimentos Imobiliários</span><span data-lang="en">Real Estate Investment Consulting</span><span data-lang="fr">Conseil en Investissement Immobilier</span></h3>
+        <p><span data-lang="pt" class="active">Análise de mercado, patrimônio imobiliário no Brasil e orientação sobre onde investir em imóveis no Brasil com alto potencial de valorização.</span><span data-lang="en">Market analysis and guidance on where to invest in real estate in Brazil with high appreciation potential.</span><span data-lang="fr">Analyse de marché et orientation sur les meilleures opportunités d'investissement immobilier au Brésil.</span></p>
       </article>
-
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">📝</span>
-        <h3>
-          <span data-lang="pt" class="active">Assessoria Jurídica e Documental</span>
-          <span data-lang="en">Legal & Documentation Support</span>
-          <span data-lang="fr">Assistance Juridique et Documentaire</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Suporte completo em documentação, contratos e regularização de imóveis para compradores nacionais e internacionais.</span>
-          <span data-lang="en">Full support in documentation, contracts, and property regularization for national and international buyers.</span>
-          <span data-lang="fr">Support complet en documentation, contrats et régularisation immobilière pour les acheteurs nationaux et internationaux.</span>
-        </p>
+        <span class="service-icon">📝</span>
+        <h3><span data-lang="pt" class="active">Assessoria Jurídica e Documental</span><span data-lang="en">Legal & Documentation Support</span><span data-lang="fr">Assistance Juridique et Documentaire</span></h3>
+        <p><span data-lang="pt" class="active">Suporte completo para comprar imóvel no Brasil com segurança: documentação, contratos e regularização para compradores nacionais e internacionais.</span><span data-lang="en">Full support for buying property in Brazil safely: documentation, contracts, and regularization for national and international buyers.</span><span data-lang="fr">Support complet pour acheter un bien au Brésil en sécurité: documentation, contrats et régularisation.</span></p>
       </article>
-
       <article class="service-card">
-        <span class="service-icon" aria-hidden="true">🤝</span>
-        <h3>
-          <span data-lang="pt" class="active">Visitas e Tours Virtuais</span>
-          <span data-lang="en">Visits & Virtual Tours</span>
-          <span data-lang="fr">Visites et Tours Virtuels</span>
-        </h3>
-        <p>
-          <span data-lang="pt" class="active">Organizamos visitas presenciais e tours virtuais para clientes que estão no exterior e desejam conhecer o imóvel antes da decisão de compra.</span>
-          <span data-lang="en">We organize in-person visits and virtual tours for clients abroad who want to see the property before making a purchase decision.</span>
-          <span data-lang="fr">Nous organisons des visites en personne et des visites virtuelles pour les clients à l'étranger qui souhaitent voir le bien avant de prendre une décision d'achat.</span>
-        </p>
+        <span class="service-icon">🤝</span>
+        <h3><span data-lang="pt" class="active">Visitas e Tours Virtuais</span><span data-lang="en">Visits & Virtual Tours</span><span data-lang="fr">Visites et Tours Virtuels</span></h3>
+        <p><span data-lang="pt" class="active">Organizamos visitas presenciais e tours virtuais para clientes que estão no exterior e desejam conhecer o imóvel antes da decisão de compra.</span><span data-lang="en">We organize in-person visits and virtual tours for clients abroad who want to see the property before purchasing.</span><span data-lang="fr">Visites en personne et virtuelles pour les clients à l'étranger souhaitant voir le bien avant l'achat.</span></p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ===== IMÓVEIS ===== -->
-<section id="imoveis" aria-labelledby="imoveis-title">
+<!-- IMÓVEIS -->
+<section id="imoveis" style="padding:6rem 0;background:var(--white)">
   <div class="container">
-    <p class="section-subtitle" style="color:var(--gold); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem;">
+    <p style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:0.82rem;margin-bottom:0.5rem">
       <span data-lang="pt" class="active">Destaques</span>
       <span data-lang="en">Featured Properties</span>
       <span data-lang="fr">Biens en Vedette</span>
     </p>
-    <h2 class="section-title" id="imoveis-title">
+    <h2 class="section-title">
       <span data-lang="pt" class="active">Imóveis em Destaque</span>
       <span data-lang="en">Featured Properties</span>
       <span data-lang="fr">Biens Immobiliers</span>
     </h2>
     <div class="gold-line"></div>
-
     <p class="section-subtitle">
-      <span data-lang="pt" class="active">Selecione o imóvel ideal para você. Entre em contato para mais detalhes e visitas.</span>
-      <span data-lang="en">Find your ideal property. Contact us for more details and visits.</span>
-      <span data-lang="fr">Trouvez le bien idéal. Contactez-nous pour plus de détails et des visites.</span>
+      <span data-lang="pt" class="active">Selecione o imóvel ideal para você. Clique em qualquer imóvel para ver todos os detalhes. Entre em contato para visitas.</span>
+      <span data-lang="en">Find your ideal property. Click any listing for full details. Contact us for visits.</span>
+      <span data-lang="fr">Trouvez le bien idéal. Cliquez sur n'importe quel bien pour tous les détails. Contactez-nous pour des visites.</span>
     </p>
 
     <div class="properties-grid fade-in">
+
       <!-- Card 1 -->
-      <article class="property-card">
+      <article class="property-card" onclick="openModal('modal1')">
         <div class="property-img">
-          <img
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80"
-            alt="Apartamento de luxo em Joinville"
-            loading="lazy"
-          />
-          <span class="property-tag">
-            <span data-lang="pt" class="active">Residencial</span>
-            <span data-lang="en">Residential</span>
-            <span data-lang="fr">Résidentiel</span>
-          </span>
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Apartamento alto padrão Rua Otto Boehm América Joinville" loading="lazy"/>
+          <span class="property-tag">Residencial</span>
         </div>
         <div class="property-body">
-          <h3>
-            <span data-lang="pt" class="active">Apartamento Cobertura Premium</span>
-            <span data-lang="en">Premium Penthouse Apartment</span>
-            <span data-lang="fr">Appartement Penthouse Premium</span>
-          </h3>
-          <p class="property-location">📍 Joinville, SC — Zona Norte</p>
-          <p class="property-price">R$ 2.800.000</p>
+          <h3>Exclusividade e Sofisticação — Rua Otto Boehm</h3>
+          <p class="property-location">📍 Rua Otto Boehm | América | Joinville, SC</p>
+          <p class="property-price">R$ 2.150.000</p>
           <div class="property-features">
-            <span class="prop-feat">🛏 4
-              <span data-lang="pt" class="active">quartos</span>
-              <span data-lang="en">bedrooms</span>
-              <span data-lang="fr">chambres</span>
-            </span>
-            <span class="prop-feat">🚿 4
-              <span data-lang="pt" class="active">banheiros</span>
-              <span data-lang="en">bathrooms</span>
-              <span data-lang="fr">salles de bain</span>
-            </span>
-            <span class="prop-feat">📐 320m²</span>
-            <span class="prop-feat">🚗 3
-              <span data-lang="pt" class="active">vagas</span>
-              <span data-lang="en">parking</span>
-              <span data-lang="fr">places</span>
-            </span>
+            <span class="prop-feat">🛏 4 quartos</span>
+            <span class="prop-feat">🚿 5 banheiros</span>
+            <span class="prop-feat">📐 Mobiliado</span>
           </div>
+          <span class="property-cta">Ver Detalhes →</span>
         </div>
       </article>
 
       <!-- Card 2 -->
-      <article class="property-card">
+      <article class="property-card" onclick="openModal('modal2')">
         <div class="property-img">
-          <img
-            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
-            alt="Terreno industrial em Joinville"
-            loading="lazy"
-          />
-          <span class="property-tag">
-            <span data-lang="pt" class="active">Industrial</span>
-            <span data-lang="en">Industrial</span>
-            <span data-lang="fr">Industriel</span>
-          </span>
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Apartamento 3 suítes alto padrão América Joinville investimento imobiliário" loading="lazy"/>
+          <span class="property-tag">Residencial</span>
         </div>
         <div class="property-body">
-          <h3>
-            <span data-lang="pt" class="active">Terreno Industrial Distrito Norte</span>
-            <span data-lang="en">Industrial Land — North District</span>
-            <span data-lang="fr">Terrain Industriel — District Nord</span>
-          </h3>
-          <p class="property-location">📍 Joinville, SC — Distrito Industrial</p>
-          <p class="property-price">R$ 8.500.000</p>
+          <h3>Apartamento 3 Suítes — América</h3>
+          <p class="property-location">📍 Bairro América | Joinville, SC</p>
+          <p class="property-price">R$ 4.000.000</p>
           <div class="property-features">
-            <span class="prop-feat">📐 25.000m²</span>
-            <span class="prop-feat">🏗
-              <span data-lang="pt" class="active">Zoneamento Industrial</span>
-              <span data-lang="en">Industrial Zoning</span>
-              <span data-lang="fr">Zone Industrielle</span>
-            </span>
+            <span class="prop-feat">🛏 3 suítes</span>
+            <span class="prop-feat">🚿 4 banheiros</span>
+            <span class="prop-feat">📐 422,10m²</span>
           </div>
+          <span class="property-cta">Ver Detalhes →</span>
         </div>
       </article>
 
       <!-- Card 3 -->
-      <article class="property-card">
+      <article class="property-card" onclick="openModal('modal3')">
         <div class="property-img">
-          <img
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
-            alt="Apartamento de luxo em Balneário Camboriú"
-            loading="lazy"
-          />
-          <span class="property-tag">
-            <span data-lang="pt" class="active">Residencial</span>
-            <span data-lang="en">Residential</span>
-            <span data-lang="fr">Résidentiel</span>
-          </span>
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Cobertura duplex luxo Centro Joinville imóvel alto padrão" loading="lazy"/>
+          <span class="property-tag">Cobertura</span>
         </div>
         <div class="property-body">
-          <h3>
-            <span data-lang="pt" class="active">Apartamento Vista Mar</span>
-            <span data-lang="en">Ocean View Apartment</span>
-            <span data-lang="fr">Appartement Vue Mer</span>
-          </h3>
-          <p class="property-location">📍 Balneário Camboriú, SC</p>
-          <p class="property-price">R$ 5.200.000</p>
+          <h3>Cobertura Duplex — Centro</h3>
+          <p class="property-location">📍 Centro | Joinville, SC</p>
+          <p class="property-price">R$ 5.350.000</p>
           <div class="property-features">
-            <span class="prop-feat">🛏 3
-              <span data-lang="pt" class="active">quartos</span>
-              <span data-lang="en">bedrooms</span>
-              <span data-lang="fr">chambres</span>
-            </span>
-            <span class="prop-feat">🚿 3
-              <span data-lang="pt" class="active">banheiros</span>
-              <span data-lang="en">bathrooms</span>
-              <span data-lang="fr">salles de bain</span>
-            </span>
-            <span class="prop-feat">📐 210m²</span>
-            <span class="prop-feat">🏊
-              <span data-lang="pt" class="active">Piscina</span>
-              <span data-lang="en">Pool</span>
-              <span data-lang="fr">Piscine</span>
-            </span>
+            <span class="prop-feat">🛏 4 quartos</span>
+            <span class="prop-feat">🚿 7 banheiros</span>
+            <span class="prop-feat">📐 Cobertura</span>
           </div>
+          <span class="property-cta">Ver Detalhes →</span>
         </div>
       </article>
+
+      <!-- Card 4 -->
+      <article class="property-card" onclick="openModal('modal4')">
+        <div class="property-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Apartamento Atiradores Glória Joinville comprar imóvel" loading="lazy"/>
+          <span class="property-tag">Residencial</span>
+        </div>
+        <div class="property-body">
+          <h3>Apartamento Atiradores — Glória</h3>
+          <p class="property-location">📍 Rua Euzébio de Queirós | Glória | Joinville, SC</p>
+          <p class="property-price">R$ 1.290.000</p>
+          <div class="property-features">
+            <span class="prop-feat">🛏 3 dormitórios</span>
+            <span class="prop-feat">🚿 4 banheiros</span>
+            <span class="prop-feat">📐 219,54m²</span>
+          </div>
+          <span class="property-cta">Ver Detalhes →</span>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="property-card" onclick="openModal('modal5')">
+        <div class="property-img">
+          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Casa de luxo Glória Joinville imóvel alto padrão Santa Catarina" loading="lazy"/>
+          <span class="property-tag">Casa</span>
+        </div>
+        <div class="property-body">
+          <h3>Casa de Alto Padrão — Glória</h3>
+          <p class="property-location">📍 Bairro Glória | Joinville, SC</p>
+          <p class="property-price">R$ 2.280.000</p>
+          <div class="property-features">
+            <span class="prop-feat">🛏 4 dormitórios</span>
+            <span class="prop-feat">🚿 4 banheiros</span>
+            <span class="prop-feat">📐 1.284,54m²</span>
+          </div>
+          <span class="property-cta">Ver Detalhes →</span>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="property-card" onclick="openModal('modal6')">
+        <div class="property-img">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Galpão industrial Araquari terreno estratégico empresas Brasil" loading="lazy"/>
+          <span class="property-tag">Industrial</span>
+        </div>
+        <div class="property-body">
+          <h3>Galpão Vitrine — Araquari</h3>
+          <p class="property-location">📍 Araquari, SC</p>
+          <p class="property-price">R$ 25.000.000</p>
+          <div class="property-features">
+            <span class="prop-feat">📐 40.000m²</span>
+            <span class="prop-feat">🏗 Industrial</span>
+            <span class="prop-feat">🚛 Logística</span>
+          </div>
+          <span class="property-cta">Ver Detalhes →</span>
+        </div>
+      </article>
+
     </div>
 
-    <div style="text-align:center; margin-top:2.5rem;">
+    <div style="text-align:center;margin-top:2.5rem">
       <a href="#contato" class="btn btn-gold">
         <span data-lang="pt" class="active">Consultar Mais Imóveis</span>
         <span data-lang="en">Inquire About More Properties</span>
@@ -1220,301 +594,69 @@
   </div>
 </section>
 
-<!-- ===== REGIÕES ===== -->
-<section id="regioes" aria-labelledby="regioes-title">
-  <div class="container">
-    <p class="section-subtitle" style="color:var(--gold); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem;">
-      <span data-lang="pt" class="active">Onde Atuamos</span>
-      <span data-lang="en">Where We Operate</span>
-      <span data-lang="fr">Où Nous Opérons</span>
-    </p>
-    <h2 class="section-title" id="regioes-title" style="color:var(--white);">
-      <span data-lang="pt" class="active">Regiões de Atuação</span>
-      <span data-lang="en">Areas of Operation</span>
-      <span data-lang="fr">Zones d'Opération</span>
-    </h2>
-    <div class="gold-line"></div>
-
-    <div class="regions-grid">
-      <div class="region-card">
-        <div class="region-icon">🏙️</div>
-        <h3>Joinville</h3>
-        <p>
-          <span data-lang="pt" class="active">Foco principal · Polo industrial</span>
-          <span data-lang="en">Main focus · Industrial hub</span>
-          <span data-lang="fr">Focus principal · Pôle industriel</span>
-        </p>
+<!-- MODAIS DOS IMÓVEIS -->
+<div class="modal-overlay" id="modal1" onclick="closeModalOutside(event,'modal1')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal1')">✕</button>
+    <img class="modal-img" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Apartamento Rua Otto Boehm Joinville"/>
+    <div class="modal-content">
+      <span class="modal-tag">Residencial · Mobiliado</span>
+      <h2 class="modal-title">Exclusividade e Sofisticação — Rua Otto Boehm</h2>
+      <p class="modal-location">📍 Rua Otto Boehm | Bairro América | Joinville, SC</p>
+      <p class="modal-price">R$ 2.150.000</p>
+      <div class="modal-features">
+        <div class="modal-feat"><span>🛏</span>4 Dormitórios</div>
+        <div class="modal-feat"><span>🚿</span>5 Banheiros</div>
+        <div class="modal-feat"><span>🛋</span>Mobiliado</div>
+        <div class="modal-feat"><span>⭐</span>Alto Padrão</div>
       </div>
-      <div class="region-card">
-        <div class="region-icon">🌊</div>
-        <h3>Balneário Camboriú</h3>
-        <p>
-          <span data-lang="pt" class="active">Luxo à beira-mar</span>
-          <span data-lang="en">Beachfront luxury</span>
-          <span data-lang="fr">Luxe en bord de mer</span>
-        </p>
-      </div>
-      <div class="region-card">
-        <div class="region-icon">🏔️</div>
-        <h3>Florianópolis</h3>
-        <p>
-          <span data-lang="pt" class="active">Capital · Ilha da Magia</span>
-          <span data-lang="en">Capital · Magic Island</span>
-          <span data-lang="fr">Capitale · Île Magique</span>
-        </p>
-      </div>
-      <div class="region-card">
-        <div class="region-icon">🏭</div>
-        <h3>Jaraguá do Sul</h3>
-        <p>
-          <span data-lang="pt" class="active">Zona industrial</span>
-          <span data-lang="en">Industrial zone</span>
-          <span data-lang="fr">Zone industrielle</span>
-        </p>
-      </div>
-      <div class="region-card">
-        <div class="region-icon">🌿</div>
-        <h3>São Francisco do Sul</h3>
-        <p>
-          <span data-lang="pt" class="active">Porto · Logística</span>
-          <span data-lang="en">Port · Logistics</span>
-          <span data-lang="fr">Port · Logistique</span>
-        </p>
+      <p class="modal-desc">Apartamento de alto padrão com exclusividade e sofisticação no bairro América, um dos endereços mais valorizados de Joinville. Totalmente mobiliado, com acabamentos de primeira linha, 4 dormitórios, 5 banheiros e localização privilegiada. Excelente oportunidade de investimento imobiliário em área de forte valorização. Ideal para moradia de luxo ou para investidores que buscam imóveis com alto potencial de renda.</p>
+      <div class="modal-actions">
+        <a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20apartamento%20da%20Rua%20Otto%20Boehm%20-%20R%24%202.150.000" target="_blank" class="modal-wa">📱 WhatsApp</a>
+        <a href="#contato" onclick="closeModal('modal1')" class="modal-contact">✉️ Enviar Mensagem</a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ===== CONTATO ===== -->
-<section id="contato" aria-labelledby="contato-title">
-  <div class="container">
-    <p class="section-subtitle" style="color:var(--gold); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem;">
-      <span data-lang="pt" class="active">Entre em Contato</span>
-      <span data-lang="en">Get in Touch</span>
-      <span data-lang="fr">Contactez-nous</span>
-    </p>
-    <h2 class="section-title" id="contato-title">
-      <span data-lang="pt" class="active">Fale com Nossa Equipe</span>
-      <span data-lang="en">Talk to Our Team</span>
-      <span data-lang="fr">Parlez à Notre Équipe</span>
-    </h2>
-    <div class="gold-line"></div>
-
-    <div class="contact-grid">
-      <!-- Info -->
-      <div class="contact-info fade-in">
-        <h3>
-          <span data-lang="pt" class="active">Estamos Aqui para Ajudar</span>
-          <span data-lang="en">We Are Here to Help</span>
-          <span data-lang="fr">Nous Sommes Là pour Vous Aider</span>
-        </h3>
-
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">📍</div>
-          <div class="contact-item-text">
-            <strong>
-              <span data-lang="pt" class="active">Escritório Principal</span>
-              <span data-lang="en">Main Office</span>
-              <span data-lang="fr">Bureau Principal</span>
-            </strong>
-            <span>Joinville, Santa Catarina, Brasil</span>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">📞</div>
-          <div class="contact-item-text">
-            <strong>
-              <span data-lang="pt" class="active">Telefone / WhatsApp</span>
-              <span data-lang="en">Phone / WhatsApp</span>
-              <span data-lang="fr">Téléphone / WhatsApp</span>
-            </strong>
-            <span>+55 (47) 9 9216-9689 — Marcel Vicentini</span>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">✉️</div>
-          <div class="contact-item-text">
-            <strong>E-mail</strong>
-            <span>contato@mvimoveis.com.br</span>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">📷</div>
-          <div class="contact-item-text">
-            <strong>Instagram</strong>
-            <span>
-              <a href="https://www.instagram.com/vicentinimarcel?igsh=eTJoaHo5MGF5ajFq" target="_blank" rel="noopener">
-                @vicentinimarcel
-              </a>
-            </span>
-          </div>
-        </div>
+<div class="modal-overlay" id="modal2" onclick="closeModalOutside(event,'modal2')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal2')">✕</button>
+    <img class="modal-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Apartamento 3 suítes América Joinville"/>
+    <div class="modal-content">
+      <span class="modal-tag">Residencial · Alto Padrão</span>
+      <h2 class="modal-title">Apartamento 3 Suítes — Bairro América</h2>
+      <p class="modal-location">📍 Bairro América | Joinville, SC</p>
+      <p class="modal-price">R$ 4.000.000</p>
+      <div class="modal-features">
+        <div class="modal-feat"><span>🛏</span>3 Suítes</div>
+        <div class="modal-feat"><span>🚿</span>4 Banheiros</div>
+        <div class="modal-feat"><span>📐</span>422,10m²</div>
+        <div class="modal-feat"><span>⭐</span>Luxo</div>
       </div>
-
-      <!-- Formulário (apenas visual, sem backend) -->
-      <div class="contact-form fade-in">
-        <h3>
-          <span data-lang="pt" class="active">Envie uma Mensagem</span>
-          <span data-lang="en">Send a Message</span>
-          <span data-lang="fr">Envoyez un Message</span>
-        </h3>
-        <form onsubmit="handleFormSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nome">
-                <span data-lang="pt" class="active">Nome</span>
-                <span data-lang="en">Name</span>
-                <span data-lang="fr">Nom</span>
-              </label>
-              <input type="text" id="nome" name="nome" required />
-            </div>
-            <div class="form-group">
-              <label for="email">
-                <span data-lang="pt" class="active">E-mail</span>
-                <span data-lang="en">E-mail</span>
-                <span data-lang="fr">E-mail</span>
-              </label>
-              <input type="email" id="email" name="email" required />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="telefone">
-              <span data-lang="pt" class="active">Telefone / WhatsApp</span>
-              <span data-lang="en">Phone / WhatsApp</span>
-              <span data-lang="fr">Téléphone / WhatsApp</span>
-            </label>
-            <input type="text" id="telefone" name="telefone" />
-          </div>
-
-          <div class="form-group">
-            <label for="tipo">
-              <span data-lang="pt" class="active">Interesse</span>
-              <span data-lang="en">Interest</span>
-              <span data-lang="fr">Intérêt</span>
-            </label>
-            <select id="tipo" name="tipo">
-              <option value="comprar">
-                <span data-lang="pt" class="active">Comprar Imóvel</span>
-              </option>
-              <option value="vender">
-                <span data-lang="pt" class="active">Vender Imóvel</span>
-              </option>
-              <option value="investir">
-                <span data-lang="pt" class="active">Investimento</span>
-              </option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="mensagem">
-              <span data-lang="pt" class="active">Mensagem</span>
-              <span data-lang="en">Message</span>
-              <span data-lang="fr">Message</span>
-            </label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-gold form-submit">
-            <span data-lang="pt" class="active">Enviar Mensagem</span>
-            <span data-lang="en">Send Message</span>
-            <span data-lang="fr">Envoyer le Message</span>
-          </button>
-
-          <div class="form-success" id="formSuccess">
-            <span data-lang="pt" class="active">Mensagem enviada! Em breve entraremos em contato.</span>
-            <span data-lang="en">Message sent! We will contact you shortly.</span>
-            <span data-lang="fr">Message envoyé ! Nous vous contacterons sous peu.</span>
-          </div>
-        </form>
+      <p class="modal-desc">Apartamento de luxo com 3 suítes e 422,10m² de área total no bairro América, região nobre de Joinville. Acabamento de altíssimo padrão, amplas áreas sociais, infraestrutura completa e posição privilegiada. Imóvel com forte potencial de valorização e excelente para investimento patrimonial no Brasil. Perfeito para brasileiros no exterior que desejam comprar imóvel no Brasil com segurança.</p>
+      <div class="modal-actions">
+        <a href="https://wa.me/5547992169689?text=Olá%20Marcel%2C%20tenho%20interesse%20no%20Apartamento%203%20Suítes%20no%20América%20-%20R%24%204.000.000" target="_blank" class="modal-wa">📱 WhatsApp</a>
+        <a href="#contato" onclick="closeModal('modal2')" class="modal-contact">✉️ Enviar Mensagem</a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ===== WHATSAPP FLOAT ===== -->
-<a
-  href="https://wa.me/5547992169689"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener"
-  aria-label="Falar com MV Imóveis no WhatsApp"
->
-  ☎
-</a>
+<div class="modal-overlay" id="modal3" onclick="closeModalOutside(event,'modal3')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal3')">✕</button>
+    <img class="modal-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Cobertura duplex Centro Joinville"/>
+    <div class="modal-content">
+      <span class="modal-tag">Cobertura Duplex · Exclusivo</span>
+      <h2 class="modal-title">Cobertura Duplex — Centro de Joinville</h2>
+      <p class="modal-location">📍 Centro | Joinville, SC</p>
+      <p class="modal-price">R$ 5.350.000</p>
+      <div class="modal-features">
+        <div class="modal-feat"><span>🛏</span>4 Dormitórios</div>
+        <div class="modal-feat"><span>🚿</span>7 Banheiros</div>
+        <div class="modal-feat"><span>🏙️</span>Duplex</div>
+        <div class="modal-feat"><span>⭐</span>Exclusivo</div>
+      </div>
+      <p class="modal-desc">Cobertura duplex exclusiva no centro de Joinville, com 4 dormitórios, 7 banheiros e uma das vistas mais privilegiadas da cidade. Acabamento luxuoso, amplos terraços e infraestrutura de altíssimo nível. Um dos imóveis mais exclusivos disponíveis em Santa Catarina. Ideal para quem busca imóveis de luxo no Brasil como patrim
 
-<!-- ===== SCROLL TOP ===== -->
-<button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
-
-<!-- ===== SCRIPTS ===== -->
-<script>
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  const scrollTopBtn = document.getElementById('scrollTop');
-  const fadeEls = document.querySelectorAll('.fade-in');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-      scrollTopBtn.classList.add('visible');
-    } else {
-      navbar.classList.remove('scrolled');
-      scrollTopBtn.classList.remove('visible');
-    }
-
-    fadeEls.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 80) {
-        el.classList.add('visible');
-      }
-    });
-  });
-
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  function closeMenu() {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-  }
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    const expanded = hamburger.classList.contains('open');
-    hamburger.setAttribute('aria-expanded', expanded.toString());
-  });
-
-  // Language switcher
-  function setLang(lang) {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
-    });
-
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.remove('active');
-      if (el.getAttribute('data-lang') === lang) {
-        el.classList.add('active');
-      }
-    });
-  }
-
-  // Form (simples, só mostra mensagem)
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    const successEl = document.getElementById('formSuccess');
-    successEl.style.display = 'block';
-    e.target.reset();
-  }
-</script>
-</body>
-</html>
